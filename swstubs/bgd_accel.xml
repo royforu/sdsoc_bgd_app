@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xd:data xmlns:xd="http://www.xilinx.com/xd">
+  <xd:accel name="bgd_accel" platform="zc706" compiler="g++" srcfile="lrbgd.cpp" srcpath="/home/roy/workspace/via_bgd/src" flags="-I/home/roy/workspace/via_bgd/src -I/home/roy/workspace/via_bgd/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__" is_debug="0" clk_id="2" ip_requires_adapter="1" ip_is_rtl="0" ip_has_repo="0" ip_has_debugxrf="0" ip_is_pfunc="0" ip_is_rtl_template="0" vlnv="" is_opencl="0" asmfile="lrbgd.s" esc_original_name="bgd_accel" template_source_file="NA"/>
+</xd:data>

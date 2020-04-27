@@ -495,7 +495,7 @@ void bgd_func0(float32_t vfltLabel, float32_t* pfltWeight, float32_t* pfltData, 
 	_DOT_CALC_ALL_:
 	for(int fe0 = 0; fe0 < NUM_TOTAL_FEATURE; fe0+=NUM_PIPEFACTOR)
 	{
-
+		#pragma HLS PIPELINE II=4
 		_DOT_CALC_LP:
 		for(uint32_t m = 0; m < NUM_PIPEFACTOR; m++){
 			fltDotTmp[m].float32 += pfltWeight[fe0+m].float32 * pfltData[fe0+m].float32;
@@ -504,7 +504,7 @@ void bgd_func0(float32_t vfltLabel, float32_t* pfltWeight, float32_t* pfltData, 
 
 	_DOT_CALC1_:
 	for(uint32_t m = 0; m < NUM_PIPEFACTOR; m++){
-
+		#pragma HLS UNROLL
 		fltDot.float32 += fltDotTmp[m].float32;
 	}
 
@@ -516,7 +516,7 @@ void bgd_func0(float32_t vfltLabel, float32_t* pfltWeight, float32_t* pfltData, 
 	_ACC_CALC_ALL_:
 	for(uint32_t fe0 = 0; fe0 < NUM_TOTAL_FEATURE; fe0+=1)
 	{
-
+		#pragma HLS PIPELINE  II=1
 		pfltGradient[fe0].float32 += fltDif.float32 * pfltData[fe0].float32;
 	}
 }
@@ -524,7 +524,8 @@ void bgd_func0(float32_t vfltLabel, float32_t* pfltWeight, float32_t* pfltData, 
 void bgd_func1(float32_t vfltLabel, float32_t* pfltWeight, float32_t* pfltData, float32_t* pfltGradient)
 {
     float32_t fltDotTmp[NUM_PIPEFACTOR];
-
+    //#pragma HLS ARRAY_PARTITION variable=fltDotTmp dim=1 complete
+	//#pragma HLS ARRAY_PARTITION variable=fltDotTmp cyclic factor=5
 
 	float32_t fltDif;
 	float32_t fltDot;
@@ -532,14 +533,14 @@ void bgd_func1(float32_t vfltLabel, float32_t* pfltWeight, float32_t* pfltData, 
 
 	_DOT_CALC0_:
 	for(uint32_t m = 0; m < NUM_PIPEFACTOR; m++){
-
+		#pragma HLS UNROLL
 		fltDotTmp[m].float32 = 0.0f;
 	}
 
 	_DOT_CALC_ALL_:
 	for(int fe0 = 0; fe0 < NUM_TOTAL_FEATURE; fe0+=NUM_PIPEFACTOR)
 	{
-
+		#pragma HLS PIPELINE II=4
 		_DOT_CALC_LP:
 		for(uint32_t m = 0; m < NUM_PIPEFACTOR; m++){
 			fltDotTmp[m].float32 += pfltWeight[fe0+m].float32 * pfltData[fe0+m].float32;
@@ -548,7 +549,7 @@ void bgd_func1(float32_t vfltLabel, float32_t* pfltWeight, float32_t* pfltData, 
 
 	_DOT_CALC1_:
 	for(uint32_t m = 0; m < NUM_PIPEFACTOR; m++){
-
+		#pragma HLS UNROLL
 		fltDot.float32 += fltDotTmp[m].float32;
 	}
 
@@ -560,7 +561,7 @@ void bgd_func1(float32_t vfltLabel, float32_t* pfltWeight, float32_t* pfltData, 
 	_ACC_CALC_ALL_:
 	for(uint32_t fe0 = 0; fe0 < NUM_TOTAL_FEATURE; fe0+=1)
 	{
-
+		#pragma HLS PIPELINE  II=1
 		pfltGradient[fe0].float32 += fltDif.float32 * pfltData[fe0].float32;
 	}
 }
@@ -569,7 +570,8 @@ void bgd_func1(float32_t vfltLabel, float32_t* pfltWeight, float32_t* pfltData, 
 void bgd_func2(float32_t vfltLabel, float32_t* pfltWeight, float32_t* pfltData, float32_t* pfltGradient)
 {
     float32_t fltDotTmp[NUM_PIPEFACTOR];
-
+    //#pragma HLS ARRAY_PARTITION variable=fltDotTmp dim=1 complete
+	//#pragma HLS ARRAY_PARTITION variable=fltDotTmp cyclic factor=5
 
 	float32_t fltDif;
 	float32_t fltDot;
@@ -577,14 +579,14 @@ void bgd_func2(float32_t vfltLabel, float32_t* pfltWeight, float32_t* pfltData, 
 
 	_DOT_CALC0_:
 	for(uint32_t m = 0; m < NUM_PIPEFACTOR; m++){
-
+		#pragma HLS UNROLL
 		fltDotTmp[m].float32 = 0.0f;
 	}
 
 	_DOT_CALC_ALL_:
 	for(int fe0 = 0; fe0 < NUM_TOTAL_FEATURE; fe0+=NUM_PIPEFACTOR)
 	{
-
+		#pragma HLS PIPELINE II=4
 		_DOT_CALC_LP:
 		for(uint32_t m = 0; m < NUM_PIPEFACTOR; m++){
 			fltDotTmp[m].float32 += pfltWeight[fe0+m].float32 * pfltData[fe0+m].float32;
@@ -593,7 +595,7 @@ void bgd_func2(float32_t vfltLabel, float32_t* pfltWeight, float32_t* pfltData, 
 
 	_DOT_CALC1_:
 	for(uint32_t m = 0; m < NUM_PIPEFACTOR; m++){
-
+		#pragma HLS UNROLL
 		fltDot.float32 += fltDotTmp[m].float32;
 	}
 
@@ -605,14 +607,15 @@ void bgd_func2(float32_t vfltLabel, float32_t* pfltWeight, float32_t* pfltData, 
 	_ACC_CALC_ALL_:
 	for(uint32_t fe0 = 0; fe0 < NUM_TOTAL_FEATURE; fe0+=1)
 	{
-
+		#pragma HLS PIPELINE  II=1
 		pfltGradient[fe0].float32 += fltDif.float32 * pfltData[fe0].float32;
 	}
 }
 void bgd_func3(float32_t vfltLabel, float32_t* pfltWeight, float32_t* pfltData, float32_t* pfltGradient)
 {
     float32_t fltDotTmp[NUM_PIPEFACTOR];
-
+    //#pragma HLS ARRAY_PARTITION variable=fltDotTmp dim=1 complete
+	//#pragma HLS ARRAY_PARTITION variable=fltDotTmp cyclic factor=5
 
 	float32_t fltDif;
 	float32_t fltDot;
@@ -620,14 +623,14 @@ void bgd_func3(float32_t vfltLabel, float32_t* pfltWeight, float32_t* pfltData, 
 
 	_DOT_CALC0_:
 	for(uint32_t m = 0; m < NUM_PIPEFACTOR; m++){
-
+		#pragma HLS UNROLL
 		fltDotTmp[m].float32 = 0.0f;
 	}
 
 	_DOT_CALC_ALL_:
 	for(int fe0 = 0; fe0 < NUM_TOTAL_FEATURE; fe0+=NUM_PIPEFACTOR)
 	{
-
+		#pragma HLS PIPELINE II=4
 		_DOT_CALC_LP:
 		for(uint32_t m = 0; m < NUM_PIPEFACTOR; m++){
 			fltDotTmp[m].float32 += pfltWeight[fe0+m].float32 * pfltData[fe0+m].float32;
@@ -636,7 +639,7 @@ void bgd_func3(float32_t vfltLabel, float32_t* pfltWeight, float32_t* pfltData, 
 
 	_DOT_CALC1_:
 	for(uint32_t m = 0; m < NUM_PIPEFACTOR; m++){
-
+		#pragma HLS UNROLL
 		fltDot.float32 += fltDotTmp[m].float32;
 	}
 
@@ -648,14 +651,15 @@ void bgd_func3(float32_t vfltLabel, float32_t* pfltWeight, float32_t* pfltData, 
 	_ACC_CALC_ALL_:
 	for(uint32_t fe0 = 0; fe0 < NUM_TOTAL_FEATURE; fe0+=1)
 	{
-
+		#pragma HLS PIPELINE  II=1
 		pfltGradient[fe0].float32 += fltDif.float32 * pfltData[fe0].float32;
 	}
 }
 void bgd_func4(float32_t vfltLabel, float32_t* pfltWeight, float32_t* pfltData, float32_t* pfltGradient)
 {
     float32_t fltDotTmp[NUM_PIPEFACTOR];
-
+    //#pragma HLS ARRAY_PARTITION variable=fltDotTmp dim=1 complete
+	//#pragma HLS ARRAY_PARTITION variable=fltDotTmp cyclic factor=5
 
 	float32_t fltDif;
 	float32_t fltDot;
@@ -663,14 +667,14 @@ void bgd_func4(float32_t vfltLabel, float32_t* pfltWeight, float32_t* pfltData, 
 
 	_DOT_CALC0_:
 	for(uint32_t m = 0; m < NUM_PIPEFACTOR; m++){
-
+		#pragma HLS UNROLL
 		fltDotTmp[m].float32 = 0.0f;
 	}
 
 	_DOT_CALC_ALL_:
 	for(int fe0 = 0; fe0 < NUM_TOTAL_FEATURE; fe0+=NUM_PIPEFACTOR)
 	{
-
+		#pragma HLS PIPELINE II=4
 		_DOT_CALC_LP:
 		for(uint32_t m = 0; m < NUM_PIPEFACTOR; m++){
 			fltDotTmp[m].float32 += pfltWeight[fe0+m].float32 * pfltData[fe0+m].float32;
@@ -679,7 +683,7 @@ void bgd_func4(float32_t vfltLabel, float32_t* pfltWeight, float32_t* pfltData, 
 
 	_DOT_CALC1_:
 	for(uint32_t m = 0; m < NUM_PIPEFACTOR; m++){
-
+		#pragma HLS UNROLL
 		fltDot.float32 += fltDotTmp[m].float32;
 	}
 
@@ -691,7 +695,7 @@ void bgd_func4(float32_t vfltLabel, float32_t* pfltWeight, float32_t* pfltData, 
 	_ACC_CALC_ALL_:
 	for(uint32_t fe0 = 0; fe0 < NUM_TOTAL_FEATURE; fe0+=1)
 	{
-
+		#pragma HLS PIPELINE  II=1
 		pfltGradient[fe0].float32 += fltDif.float32 * pfltData[fe0].float32;
 	}
 }

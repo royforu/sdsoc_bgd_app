@@ -42,6 +42,8 @@ ALL TIMES.
 #include <stdint.h>
 #include <time.h>
 #include <math.h>
+#include <sys/time.h>
+#include <string.h>
 #include "sds_lib.h"
 
 #include "dmain.h"
@@ -205,7 +207,68 @@ void bgd_accel_sw(float *valData, float *valWeight, float *valGradient, int regS
 }
 
 
+int gettime(struct timeval  t0, struct timeval t1)
+{
+        return ((t1.tv_sec - t0.tv_sec) * 1000.0f + (t1.tv_usec -t0.tv_usec) / 1000.0f);
+}
 
+int fpga_state()
+{
+	FILE *fptr;
+	char buf[10], *state;
+
+	system("cat /sys/class/fpga_manager/fpga0/state >> state.txt");
+	state = "operating";
+	fptr = fopen("state.txt", "r");
+	if (fptr) {
+		fgets(buf, 10, fptr);
+		fclose(fptr);
+		system("rm state.txt");
+		if (strcmp(buf, state) == 0)
+			return 0;
+		else
+			return 1;
+	}
+
+	return 1;
+}
+
+void download_bitstream()
+{
+	int ret;
+
+	//char *binfile = NULL;
+	char *Module[100] = {0};
+	int flags = 0;
+	char command[2048];
+	double time;
+	struct timeval t1, t0;
+
+
+	system("mkdir -p /lib/firmware");
+	snprintf(command, sizeof(command), "cp zc706_wrapper.bit.bin /lib/firmware");
+	system(command);
+	snprintf(command, sizeof(command), "echo %x > /sys/class/fpga_manager/fpga0/flags", flags);
+	system(command);
+
+	//tmp = strdup(binfile);
+	//while((token = strsep(&tmp, "/"))) {
+		//tmp1 = token;
+//	}
+	snprintf(command, sizeof(command), "echo zc706_wrapper.bit.bin > /sys/class/fpga_manager/fpga0/firmware");
+	gettimeofday(&t0, NULL);
+	system(command);
+	gettimeofday(&t1, NULL);
+	time = gettime(t0, t1);
+	if (!fpga_state()) {
+				printf("Time taken to load BIN is %f Milli Seconds\n\r", time);
+				printf("BIN FILE loaded through FPGA manager successfully\n\r");
+			} else {
+				printf("BIN FILE loading through FPGA manager failed\n\r");
+			}
+	snprintf(command, sizeof(command), "rm /lib/firmware/zc706_wrapper.bit.bin");
+	system(command);
+}
 
 int main(int argc, char* argv[]){
 
@@ -216,7 +279,7 @@ int main(int argc, char* argv[]){
     float  hwdata[1], hwweight[1], hwgradient[1],  *hwoutbuf;
     clock_t start, end;
     double cpu_time_used;
-
+    download_bitstream();
     int inbuffer0len = int(chunkSize*(numClasses+numFeatures+1));
     int inbuffer1len = int(numClasses*(numFeatures+1));
     int outbufferlen =  int(numClasses*(numFeatures+1));
@@ -312,7 +375,7 @@ int main(int argc, char* argv[]){
     hwoutbuf = (float *)sds_alloc(outbufferlen * sizeof(float));
     std::cout << "hwoutbuf assign done: " << std::endl;
 
-    //start = clock();
+    start = clock();
     hw_ctr.start();
     via_dma_in0(inbuf0,inbuffer0len,hwdata);
     via_dma_in1(inbuf1,inbuffer1len,hwweight);
@@ -320,16 +383,16 @@ int main(int argc, char* argv[]){
     s2mm_data_copy(hwgradient,outbufferlen , hwoutbuf);
 
      hw_ctr.stop();
-   //  end = clock();
+     end = clock();
 
      uint64_t hw_cycles = hw_ctr.avg_cpu_cycles();
-    // std::cout << "Average number of CPU cycles in hardware: "
-      //             << hw_cycles << std::endl;
+     std::cout << "Average number of CPU cycles in hardware: "
+                   << hw_cycles << std::endl;
 
-     std::cout << "hw elapsed time: " << hw_cycles/pow(10,8) << std::endl;
+   //  std::cout << "hw elapsed time: " << hw_cycles/pow(10,8) << std::endl;
 
-  //   cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
-  //   std::cout << "hwclock elapsed time: " << cpu_time_used << std::endl;
+     cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
+     std::cout << "hwclock elapsed time: " << cpu_time_used << std::endl;
 
      std::cout << "hwout: " << std::endl;
      for(int i=0; i<4 ;i++)

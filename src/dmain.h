@@ -9,15 +9,15 @@ void bgd_accel(value_t& valData, value_t& valWeight, value_t& valGradient, reg32
 #else
 void bgd_accel(float *valData, float *valWeight, float *valGradient);
 #pragma SDS data zero_copy(in0[0:len])
-#pragma SDS data sys_port (in0:HP)
+#pragma SDS data sys_port (in0:ACP)
 void via_dma_in0(float *in0, int len, float *data);
 
 #pragma SDS data zero_copy(in1[0:len])
-#pragma SDS data sys_port (in1:HP)
+#pragma SDS data sys_port (in1:ACP)
 void via_dma_in1(float *in1, int len, float *weight);
 
 #pragma SDS data zero_copy(buf[0:len])
-#pragma SDS data sys_port (fifo:HP)
+#pragma SDS data sys_port (buf:ACP)
 void s2mm_data_copy(float *fifo, int len, float *buf);
 #endif
 

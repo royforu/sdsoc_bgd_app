@@ -1,0 +1,124 @@
+(c) Copyright 2012-2019 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2019.1 SW Build 2552052 on Fri May 24 14:48:04 MDT 2019
+# Start time    : Fri Apr 24 11:31:29 CST 2020
+# Command line  : sds++ --remote_ip_cache /home/roy/workspace/ip_cache -o via_bgd.elf ./src/dmain.o ./src/lrbgd.o ./src/main.o -dmclkid 2 -sds-sys-config linux -sds-proc linux -sds-pf zc706
+# Log file      : /home/roy/workspace/via_bgd/Release/_sds/reports/sds.log
+# Journal file  : /home/roy/workspace/via_bgd/Release/_sds/reports/sds.jou
+# Report file   : /home/roy/workspace/via_bgd/Release/_sds/reports/sds.rpt
+#-----------------------------------------------------------
+
+#-----------------------------------------------------------
+# This file contains undocumented internal commands and is
+# provided for diagnostic purposes. To reproduce the results
+# of this run, please run the sds++ command line above again.
+#-----------------------------------------------------------
+
+# Removing implementation files from previous run
+# Analyzing object files
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo /home/roy/workspace/via_bgd/Release/src/dmain.o /home/roy/workspace/via_bgd/Release/_sds/.data/xdinfo.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdrtlx=alloc --only-section=.xdrtlx /home/roy/workspace/via_bgd/Release/src/dmain.o /home/roy/workspace/via_bgd/Release/_sds/.rtlx/dmain.rtlx
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata /home/roy/workspace/via_bgd/Release/src/dmain.o /home/roy/workspace/via_bgd/Release/_sds/.data/s2mm_data_copy.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdpp=alloc --only-section=.xdpp /home/roy/workspace/via_bgd/Release/src/dmain.o /home/roy/workspace/via_bgd/Release/_sds/.pp/dmain.ii
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdfcnmap=alloc --only-section=.xdfcnmap /home/roy/workspace/via_bgd/Release/src/dmain.o /home/roy/workspace/via_bgd/Release/_sds/.cdb/s2mm_data_copy.s2mm_data_copy.fcnmap.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdhlscore=alloc --only-section=.xdhlscore /home/roy/workspace/via_bgd/Release/src/dmain.o /home/roy/workspace/via_bgd/Release/_sds/iprepo/repo/xilinx_com_hls_s2mm_data_copy_1_0/xilinx_com_hls_s2mm_data_copy_1_0.zip
+/usr/bin/unzip -u -o /home/roy/workspace/via_bgd/Release/_sds/iprepo/repo/xilinx_com_hls_s2mm_data_copy_1_0/xilinx_com_hls_s2mm_data_copy_1_0.zip -d /home/roy/workspace/via_bgd/Release/_sds/iprepo/repo/xilinx_com_hls_s2mm_data_copy_1_0
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdif=alloc --only-section=.xdif /home/roy/workspace/via_bgd/Release/src/dmain.o /home/roy/workspace/via_bgd/Release/_sds/.cdb/s2mm_data_copy_if.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata1=alloc --only-section=.xddata1 /home/roy/workspace/via_bgd/Release/src/dmain.o /home/roy/workspace/via_bgd/Release/_sds/.data/via_dma_in0.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdfcnmap1=alloc --only-section=.xdfcnmap1 /home/roy/workspace/via_bgd/Release/src/dmain.o /home/roy/workspace/via_bgd/Release/_sds/.cdb/via_dma_in0.via_dma_in0.fcnmap.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdhlscore1=alloc --only-section=.xdhlscore1 /home/roy/workspace/via_bgd/Release/src/dmain.o /home/roy/workspace/via_bgd/Release/_sds/iprepo/repo/xilinx_com_hls_via_dma_in0_1_0/xilinx_com_hls_via_dma_in0_1_0.zip
+/usr/bin/unzip -u -o /home/roy/workspace/via_bgd/Release/_sds/iprepo/repo/xilinx_com_hls_via_dma_in0_1_0/xilinx_com_hls_via_dma_in0_1_0.zip -d /home/roy/workspace/via_bgd/Release/_sds/iprepo/repo/xilinx_com_hls_via_dma_in0_1_0
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdif1=alloc --only-section=.xdif1 /home/roy/workspace/via_bgd/Release/src/dmain.o /home/roy/workspace/via_bgd/Release/_sds/.cdb/via_dma_in0_if.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata2=alloc --only-section=.xddata2 /home/roy/workspace/via_bgd/Release/src/dmain.o /home/roy/workspace/via_bgd/Release/_sds/.data/via_dma_in1.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdfcnmap2=alloc --only-section=.xdfcnmap2 /home/roy/workspace/via_bgd/Release/src/dmain.o /home/roy/workspace/via_bgd/Release/_sds/.cdb/via_dma_in1.via_dma_in1.fcnmap.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdhlscore2=alloc --only-section=.xdhlscore2 /home/roy/workspace/via_bgd/Release/src/dmain.o /home/roy/workspace/via_bgd/Release/_sds/iprepo/repo/xilinx_com_hls_via_dma_in1_1_0/xilinx_com_hls_via_dma_in1_1_0.zip
+/usr/bin/unzip -u -o /home/roy/workspace/via_bgd/Release/_sds/iprepo/repo/xilinx_com_hls_via_dma_in1_1_0/xilinx_com_hls_via_dma_in1_1_0.zip -d /home/roy/workspace/via_bgd/Release/_sds/iprepo/repo/xilinx_com_hls_via_dma_in1_1_0
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdif2=alloc --only-section=.xdif2 /home/roy/workspace/via_bgd/Release/src/dmain.o /home/roy/workspace/via_bgd/Release/_sds/.cdb/via_dma_in1_if.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo /home/roy/workspace/via_bgd/Release/src/lrbgd.o /home/roy/workspace/via_bgd/Release/_sds/.data/xdinfo.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdrtlx=alloc --only-section=.xdrtlx /home/roy/workspace/via_bgd/Release/src/lrbgd.o /home/roy/workspace/via_bgd/Release/_sds/.rtlx/lrbgd.rtlx
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata /home/roy/workspace/via_bgd/Release/src/lrbgd.o /home/roy/workspace/via_bgd/Release/_sds/.data/bgd_accel.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdpp=alloc --only-section=.xdpp /home/roy/workspace/via_bgd/Release/src/lrbgd.o /home/roy/workspace/via_bgd/Release/_sds/.pp/lrbgd.ii
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdfcnmap=alloc --only-section=.xdfcnmap /home/roy/workspace/via_bgd/Release/src/lrbgd.o /home/roy/workspace/via_bgd/Release/_sds/.cdb/bgd_accel.bgd_accel.fcnmap.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdhlscore=alloc --only-section=.xdhlscore /home/roy/workspace/via_bgd/Release/src/lrbgd.o /home/roy/workspace/via_bgd/Release/_sds/iprepo/repo/xilinx_com_hls_bgd_accel_1_0/xilinx_com_hls_bgd_accel_1_0.zip
+/usr/bin/unzip -u -o /home/roy/workspace/via_bgd/Release/_sds/iprepo/repo/xilinx_com_hls_bgd_accel_1_0/xilinx_com_hls_bgd_accel_1_0.zip -d /home/roy/workspace/via_bgd/Release/_sds/iprepo/repo/xilinx_com_hls_bgd_accel_1_0
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdif=alloc --only-section=.xdif /home/roy/workspace/via_bgd/Release/src/lrbgd.o /home/roy/workspace/via_bgd/Release/_sds/.cdb/bgd_accel_if.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo /home/roy/workspace/via_bgd/Release/src/main.o /home/roy/workspace/via_bgd/Release/_sds/.data/xdinfo.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata /home/roy/workspace/via_bgd/Release/src/main.o /home/roy/workspace/via_bgd/Release/_sds/.data/xddata.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdsdata=alloc --only-section=.xdsdata /home/roy/workspace/via_bgd/Release/src/main.o /home/roy/workspace/via_bgd/Release/_sds/.data/main.o.xml
+/home/roy/sdsoc/SDx/2019.1/bin/build_xd_ip_db -ip_search 0  -sds-pf /home/roy/workspace/via_bgd/Release/.Xil/zc706.hpfm  -ip /home/roy/workspace/via_bgd/Release/_sds/iprepo/repo/xilinx_com_hls_s2mm_data_copy_1_0 -ip /home/roy/workspace/via_bgd/Release/_sds/iprepo/repo/xilinx_com_hls_via_dma_in0_1_0 -ip /home/roy/workspace/via_bgd/Release/_sds/iprepo/repo/xilinx_com_hls_via_dma_in1_1_0 -ip /home/roy/workspace/via_bgd/Release/_sds/iprepo/repo/xilinx_com_hls_bgd_accel_1_0  -o /home/roy/workspace/via_bgd/Release/_sds/.cdb/xd_ip_db.xml  
+# Generating data motion network
+/home/roy/sdsoc/SDx/2019.1/bin/llvm-link -o /home/roy/workspace/via_bgd/Release/_sds/.llvm/sds_all.o /home/roy/workspace/via_bgd/Release/_sds/.llvm/./src/dmain.s /home/roy/workspace/via_bgd/Release/_sds/.llvm/./src/lrbgd.s /home/roy/workspace/via_bgd/Release/_sds/.llvm/./src/main.s
+cd /home/roy/workspace/via_bgd/Release/_sds/.llvm
+cd /home/roy/workspace/via_bgd/Release/_sds/.llvm
+/home/roy/sdsoc/SDx/2019.1/bin/XidanePass  --dmclkid 2  --repo /home/roy/workspace/via_bgd/Release/_sds/.cdb/xd_ip_db.xml  --dmdb /home/roy/sdsoc/SDx/2019.1/data/DM.db   -os linux -processor cortex-a9 -partition 0  
+cd /home/roy/workspace/via_bgd/Release
+# Removing implementation files from previous run /home/roy/workspace/via_bgd/Release/_sds/p0/vivado
+# Removing implementation files from previous run /home/roy/workspace/via_bgd/Release/_sds/p0/vpl
+cd /home/roy/workspace/via_bgd/Release
+# Creating block diagram (BD)
+cd /home/roy/workspace/via_bgd/Release/_sds/p0/.xsd
+/home/roy/sdsoc/SDx/2019.1/bin/sdx_link  -cf-system /home/roy/workspace/via_bgd/Release/_sds/.llvm/apsys_0.xml  -cf-db  /home/roy/workspace/via_bgd/Release/_sds/.cdb/xd_ip_db.xml  -xpfm /home/roy/sdsoc/SDx/2019.1/platforms/zc706/zc706.xpfm   -multi-clks -trace-buffer 1024 -os linux -quiet
+cd /home/roy/workspace/via_bgd/Release
+cd _sds/p0/.cf_work
+/home/roy/sdsoc/SDx/2019.1/bin/cf2sw  -i /home/roy/workspace/via_bgd/Release/_sds/.llvm/apsys_0.xml  -r /home/roy/workspace/via_bgd/Release/_sds/.cdb/xd_ip_db.xml  -pollMode 0 -mc
+cd /home/roy/workspace/via_bgd/Release
+# Rewrite caller functions
+cd /home/roy/workspace/via_bgd/Release/_sds/swstubs
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo /home/roy/workspace/via_bgd/Release/src/main.o /home/roy/workspace/via_bgd/Release/_sds/.data/xdinfo.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata /home/roy/workspace/via_bgd/Release/src/main.o /home/roy/workspace/via_bgd/Release/_sds/.data/xddata.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdsdata=alloc --only-section=.xdsdata /home/roy/workspace/via_bgd/Release/src/main.o /home/roy/workspace/via_bgd/Release/_sds/.data/main.o.xml
+/home/roy/sdsoc/SDx/2019.1/bin/caller_rewrite  -rewrite /home/roy/workspace/via_bgd/Release/_sds/.llvm/caller0.cfrewrite  -o /home/roy/workspace/via_bgd/Release/_sds/swstubs/main.cpp  /home/roy/workspace/via_bgd/Release/_sds/swstubs/unix_main.cpp  --  -c  -I/home/roy/workspace/via_bgd/src -I/home/roy/workspace/via_bgd/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__  -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g -w      -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I /home/roy/sdsoc/Vivado/2019.1/include   -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0 -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/arm-linux-gnueabihf -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/backward -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include-fixed -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include  -std=c++11
+# Compile caller rewrite file /home/roy/workspace/via_bgd/Release/_sds/swstubs/main.cpp
+arm-linux-gnueabihf-g++  -c /home/roy/workspace/via_bgd/Release/_sds/swstubs/main.cpp  -I/home/roy/workspace/via_bgd/src -I/home/roy/workspace/via_bgd/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__        -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I /home/roy/sdsoc/Vivado/2019.1/include  -o /home/roy/workspace/via_bgd/Release/_sds/swstubs/main.o
+cd /home/roy/workspace/via_bgd/Release
+# Prepare hardware access API functions
+cd /home/roy/workspace/via_bgd/Release
+# Create accelerator stub functions
+cd /home/roy/workspace/via_bgd/Release/_sds/swstubs
+/home/roy/sdsoc/SDx/2019.1/bin/stub_gen  -func "s2mm_data_copy" -stub /home/roy/workspace/via_bgd/Release/_sds/.llvm/s2mm_data_copy.cfrewrite  -o /home/roy/workspace/via_bgd/Release/_sds/swstubs/dmain.cpp  /home/roy/workspace/via_bgd/Release/_sds/swstubs/unix_dmain.cpp  --  -c  -I/home/roy/workspace/via_bgd/src -I/home/roy/workspace/via_bgd/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__  -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g -w      -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I /home/roy/sdsoc/Vivado/2019.1/include   -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0 -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/arm-linux-gnueabihf -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/backward -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include-fixed -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include  -std=c++11
+/home/roy/sdsoc/SDx/2019.1/bin/stub_gen  -func "via_dma_in0" -stub /home/roy/workspace/via_bgd/Release/_sds/.llvm/via_dma_in0.cfrewrite  -o /home/roy/workspace/via_bgd/Release/_sds/swstubs/dmain.cpp  /home/roy/workspace/via_bgd/Release/_sds/swstubs/unix_dmain.cpp  --  -c  -I/home/roy/workspace/via_bgd/src -I/home/roy/workspace/via_bgd/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__  -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g -w      -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I /home/roy/sdsoc/Vivado/2019.1/include   -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0 -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/arm-linux-gnueabihf -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/backward -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include-fixed -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include  -std=c++11
+/home/roy/sdsoc/SDx/2019.1/bin/stub_gen  -func "via_dma_in1" -stub /home/roy/workspace/via_bgd/Release/_sds/.llvm/via_dma_in1.cfrewrite  -o /home/roy/workspace/via_bgd/Release/_sds/swstubs/dmain.cpp  /home/roy/workspace/via_bgd/Release/_sds/swstubs/unix_dmain.cpp  --  -c  -I/home/roy/workspace/via_bgd/src -I/home/roy/workspace/via_bgd/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__  -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g -w      -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I /home/roy/sdsoc/Vivado/2019.1/include   -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0 -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/arm-linux-gnueabihf -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/backward -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include-fixed -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include  -std=c++11
+/home/roy/sdsoc/SDx/2019.1/bin/stub_gen  -func "bgd_accel" -stub /home/roy/workspace/via_bgd/Release/_sds/.llvm/bgd_accel.cfrewrite  -o /home/roy/workspace/via_bgd/Release/_sds/swstubs/lrbgd.cpp  /home/roy/workspace/via_bgd/Release/_sds/swstubs/unix_lrbgd.cpp  --  -c  -I/home/roy/workspace/via_bgd/src -I/home/roy/workspace/via_bgd/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__  -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g -w      -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I /home/roy/sdsoc/Vivado/2019.1/include   -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0 -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/arm-linux-gnueabihf -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/backward -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include-fixed -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include  -std=c++11
+cd /home/roy/workspace/via_bgd/Release
+cd /home/roy/workspace/via_bgd/Release/_sds/swstubs
+# Compile hardware access API functions
+arm-linux-gnueabihf-gcc         -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I /home/roy/sdsoc/Vivado/2019.1/include -c  /home/roy/workspace/via_bgd/Release/_sds/swstubs/portinfo.c
+arm-linux-gnueabihf-g++        -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I /home/roy/sdsoc/Vivado/2019.1/include -c  /home/roy/workspace/via_bgd/Release/_sds/swstubs/cf_stub.c
+arm-linux-gnueabihf-ar crs /home/roy/workspace/via_bgd/Release/_sds/swstubs/libxlnk_stub.a /home/roy/workspace/via_bgd/Release/_sds/swstubs/portinfo.o /home/roy/workspace/via_bgd/Release/_sds/swstubs/cf_stub.o
+cd /home/roy/workspace/via_bgd/Release
+cd /home/roy/workspace/via_bgd/Release/_sds/swstubs
+# Compile accelerator stub functions
+arm-linux-gnueabihf-g++ -c dmain.cpp  -I/home/roy/workspace/via_bgd/src -I/home/roy/workspace/via_bgd/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__        -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I /home/roy/sdsoc/Vivado/2019.1/include -o dmain.o
+arm-linux-gnueabihf-g++ -c dmain.cpp  -I/home/roy/workspace/via_bgd/src -I/home/roy/workspace/via_bgd/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__        -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I /home/roy/sdsoc/Vivado/2019.1/include -o dmain.o
+arm-linux-gnueabihf-g++ -c dmain.cpp  -I/home/roy/workspace/via_bgd/src -I/home/roy/workspace/via_bgd/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__        -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I /home/roy/sdsoc/Vivado/2019.1/include -o dmain.o
+arm-linux-gnueabihf-g++ -c lrbgd.cpp  -I/home/roy/workspace/via_bgd/src -I/home/roy/workspace/via_bgd/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__        -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I /home/roy/sdsoc/Vivado/2019.1/include -o lrbgd.o
+cd /home/roy/workspace/via_bgd/Release
+cd /home/roy/workspace/via_bgd/Release/_sds/swstubs
+arm-linux-gnueabihf-ar crs /home/roy/workspace/via_bgd/Release/_sds/swstubs/libvia_bgd.a /home/roy/workspace/via_bgd/Release/_sds/swstubs/portinfo.o /home/roy/workspace/via_bgd/Release/_sds/swstubs/cf_stub.o /home/roy/workspace/via_bgd/Release/_sds/swstubs/dmain.o /home/roy/workspace/via_bgd/Release/_sds/swstubs/lrbgd.o
+cd /home/roy/workspace/via_bgd/Release
+# Preliminary link application ELF
+arm-linux-gnueabihf-g++    /home/roy/workspace/via_bgd/Release/_sds/swstubs/dmain.o /home/roy/workspace/via_bgd/Release/_sds/swstubs/lrbgd.o /home/roy/workspace/via_bgd/Release/_sds/swstubs/main.o      -L/home/roy/workspace/via_bgd/Release/_sds/swstubs -Wl,--start-group  -Wl,--end-group -Wl,--start-group    -lpthread -L/home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/lib -lsds_lib -lxlnk_stub  -Wl,--end-group -o /home/roy/workspace/via_bgd/Release/_sds/swstubs/via_bgd.elf 
+arm-linux-gnueabihf-objcopy -R .xdinfo -R .xddata -R .xdasm -R .xdfcnmap -R .xdhlscore -R .xdif -R .xdparams -R .xdcore -R .xdrepo -R .xdsdata -R .xdpp -R .xdrtlx /home/roy/workspace/via_bgd/Release/_sds/swstubs/via_bgd.elf
+cd /home/roy/workspace/via_bgd/Release
+# Enable generation of hardware programming files
+# Enable generation of boot files
+# Calling VPL
+/home/roy/sdsoc/SDx/2019.1/bin/vpl   --iprepo /home/roy/workspace/via_bgd/Release/_sds/iprepo/repo  --iprepo /home/roy/sdsoc/SDx/2019.1/data/ip/xilinx  --platform /home/roy/sdsoc/SDx/2019.1/platforms/zc706/zc706.xpfm  --temp_dir /home/roy/workspace/via_bgd/Release/_sds/p0  --output_dir /home/roy/workspace/via_bgd/Release/_sds/p0/vpl  --input_file /home/roy/workspace/via_bgd/Release/_sds/p0/.xsd/top.bd.tcl  --target hw   --save_temps  --kernels s2mm_data_copy:via_dma_in0:via_dma_in1:bgd_accel:adapter --webtalk_flag SDSoC  --remote_ip_cache /home/roy/workspace/ip_cache --xp "param:compiler.deleteDefaultReportConfigs=false" 
+cd _sds/p0/.cf_work
+/home/roy/sdsoc/SDx/2019.1/bin/cf2sw  -i /home/roy/workspace/via_bgd/Release/_sds/.llvm/apsys_0.xml  -r /home/roy/workspace/via_bgd/Release/_sds/.cdb/xd_ip_db.xml  -a address_map.xml  -pollMode 0 -mc
+cd /home/roy/workspace/via_bgd/Release
+# Software tracing enabled
+cd /home/roy/workspace/via_bgd/Release/_sds/swstubs
+# Compile hardware access API functions
+arm-linux-gnueabihf-gcc         -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I /home/roy/sdsoc/Vivado/2019.1/include -c  /home/roy/workspace/via_bgd/Release/_sds/swstubs/portinfo.c
+arm-linux-gnueabihf-g++        -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I /home/roy/sdsoc/Vivado/2019.1/include -c  /home/roy/workspace/via_bgd/Release/_sds/swstubs/cf_stub.c
+arm-linux-gnueabihf-ar crs /home/roy/workspace/via_bgd/Release/_sds/swstubs/libxlnk_stub.a /home/roy/workspace/via_bgd/Release/_sds/swstubs/portinfo.o /home/roy/workspace/via_bgd/Release/_sds/swstubs/cf_stub.o
+cd /home/roy/workspace/via_bgd/Release
+cd /home/roy/workspace/via_bgd/Release/_sds/swstubs
+arm-linux-gnueabihf-ar crs /home/roy/workspace/via_bgd/Release/_sds/swstubs/libvia_bgd.a /home/roy/workspace/via_bgd/Release/_sds/swstubs/portinfo.o /home/roy/workspace/via_bgd/Release/_sds/swstubs/cf_stub.o /home/roy/workspace/via_bgd/Release/_sds/swstubs/dmain.o /home/roy/workspace/via_bgd/Release/_sds/swstubs/lrbgd.o
+cd /home/roy/workspace/via_bgd/Release
+# Link application ELF file
+arm-linux-gnueabihf-g++    /home/roy/workspace/via_bgd/Release/_sds/swstubs/dmain.o /home/roy/workspace/via_bgd/Release/_sds/swstubs/lrbgd.o /home/roy/workspace/via_bgd/Release/_sds/swstubs/main.o      -L/home/roy/workspace/via_bgd/Release/_sds/swstubs -Wl,--start-group  -Wl,--end-group -Wl,--start-group    -lpthread -L/home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/lib -lsds_lib -lxlnk_stub  -Wl,--end-group -o /home/roy/workspace/via_bgd/Release/_sds/swstubs/via_bgd.elf 
+arm-linux-gnueabihf-objcopy -R .xdinfo -R .xddata -R .xdasm -R .xdfcnmap -R .xdhlscore -R .xdif -R .xdparams -R .xdcore -R .xdrepo -R .xdsdata -R .xdpp -R .xdrtlx /home/roy/workspace/via_bgd/Release/_sds/swstubs/via_bgd.elf
+# No timing report available
+# sds++ completed at Fri Apr 24 11:55:33 CST 2020

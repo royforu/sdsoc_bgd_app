@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xd:data xd:num_accels="3" xd:format="1" xmlns:xd="http://www.xilinx.com/xd">
+  <xd:accel name="s2mm_data_copy" id="0"/>
+  <xd:accel name="via_dma_in0" id="1"/>
+  <xd:accel name="via_dma_in1" id="2"/>
+</xd:data>

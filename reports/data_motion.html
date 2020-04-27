@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    table, th, td
+    {
+      border-collapse:collapse;
+      border:1px solid black;
+    }
+    th, td
+    {
+      padding:5px;
+    }
+    p
+    {
+      font-size:200%
+    }
+  </style>
+  <title> Data Motion Network Report </title>
+</head>
+<body>
+<p>Partition 0</p>
+<sup><strong>Note:</strong>
+ <ol><li>"(size)" may show up in the Declared/Transfer Size of an argument if the actual array size was not present in the C/C++ source code, most likely the argument is a pointer.</li>
+<li>Line number under Callsite with an asterisk * is based on the generated source file located at .../_sds/.llvm.  It is not based on the original source file.</li></ol></sup><table>
+<caption><b><font size="5">Data Motion Network</font></b></caption>
+<tr>
+<th>Accelerator</th>
+<th>Argument</th>
+<th>IP Port</th>
+<th>Direction</th>
+<th>Declared Size(bytes)</th>
+<th>Pragmas</th>
+<th>Connection</th>
+</tr>
+<tr>
+<td>bgd_accel_1</td>
+<td>valData</td>
+<td>valData</td>
+<td>IN</td>
+<td>(size)*4</td>
+<td><ul>
+</ul>
+</td>
+<td>via_dma_in0_1:data</td>
+</tr>
+<td></td>
+<td>valWeight</td>
+<td>valWeight</td>
+<td>IN</td>
+<td>(size)*4</td>
+<td><ul>
+</ul>
+</td>
+<td>via_dma_in1_1:weight</td>
+</tr>
+<td></td>
+<td>valGradient</td>
+<td>valGradient</td>
+<td>OUT</td>
+<td>(size)*4</td>
+<td><ul>
+</ul>
+</td>
+<td>s2mm_data_copy_1:fifo</td>
+</tr>
+<tr>
+<td>s2mm_data_copy_1</td>
+<td>fifo</td>
+<td>fifo</td>
+<td>IN</td>
+<td>(size)*4</td>
+<td><ul>
+</ul>
+</td>
+<td>bgd_accel_1:valGradient</td>
+</tr>
+<td></td>
+<td>len</td>
+<td>len</td>
+<td>IN</td>
+<td>4</td>
+<td><ul>
+</ul>
+</td>
+<td>ps7_M_AXI_GP0:AXILITE:0xC</td>
+</tr>
+<td></td>
+<td>buf</td>
+<td>buf_offset</td>
+<td>OUT</td>
+<td>(size)*4</td>
+<td><ul>
+<li>length:(len)</li>
+<li>data_mover:zero_copy</li>
+<li>sys_port:ACP</li>
+</ul>
+</td>
+<td>ps7_S_AXI_ACP:AXIMM:0x10</td>
+</tr>
+<tr>
+<td>via_dma_in0_1</td>
+<td>in0</td>
+<td>in0_offset</td>
+<td>IN</td>
+<td>(size)*4</td>
+<td><ul>
+<li>length:(len)</li>
+<li>data_mover:zero_copy</li>
+<li>sys_port:ACP</li>
+</ul>
+</td>
+<td>ps7_S_AXI_ACP:AXIMM:0xC</td>
+</tr>
+<td></td>
+<td>len</td>
+<td>len</td>
+<td>IN</td>
+<td>4</td>
+<td><ul>
+</ul>
+</td>
+<td>ps7_M_AXI_GP0:AXILITE:0x10</td>
+</tr>
+<td></td>
+<td>data</td>
+<td>data</td>
+<td>OUT</td>
+<td>(size)*4</td>
+<td><ul>
+</ul>
+</td>
+<td>bgd_accel_1:valData</td>
+</tr>
+<tr>
+<td>via_dma_in1_1</td>
+<td>in1</td>
+<td>in1_offset</td>
+<td>IN</td>
+<td>(size)*4</td>
+<td><ul>
+<li>length:(len)</li>
+<li>data_mover:zero_copy</li>
+<li>sys_port:ACP</li>
+</ul>
+</td>
+<td>ps7_S_AXI_ACP:AXIMM:0xC</td>
+</tr>
+<td></td>
+<td>len</td>
+<td>len</td>
+<td>IN</td>
+<td>4</td>
+<td><ul>
+</ul>
+</td>
+<td>ps7_M_AXI_GP0:AXILITE:0x10</td>
+</tr>
+<td></td>
+<td>weight</td>
+<td>weight</td>
+<td>OUT</td>
+<td>(size)*4</td>
+<td><ul>
+</ul>
+</td>
+<td>bgd_accel_1:valWeight</td>
+</tr>
+</table>
+
+<table>
+<caption><b><font size="5">Accelerator Callsites</font></b></caption>
+<tr>
+<th>Accelerator</th>
+<th>Callsite</th>
+<th>IP Port</th>
+<th>Transfer Size(bytes)</th>
+<th>Paged or Contiguous</th>
+<th>Datamover Setup Time(CPU cycles)</th>
+<th>Transfer Time(CPU cycles)</th>
+</tr>
+<tr>
+<td>bgd_accel_1</td>
+<td>main.cpp:382:5</td>
+<td>valData</td>
+<td>4</td>
+<td>paged</td>
+<td></td>
+<td></td>
+</tr>
+<td></td>
+<td></td>
+<td>valWeight</td>
+<td>4</td>
+<td>paged</td>
+<td></td>
+<td></td>
+</tr>
+<td></td>
+<td></td>
+<td>valGradient</td>
+<td>4</td>
+<td>paged</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>s2mm_data_copy_1</td>
+<td>main.cpp:383:5</td>
+<td>fifo</td>
+<td>4</td>
+<td>paged</td>
+<td></td>
+<td></td>
+</tr>
+<td></td>
+<td></td>
+<td>len</td>
+<td>4</td>
+<td>paged</td>
+<td>0</td>
+<td>13</td>
+</tr>
+<td></td>
+<td></td>
+<td>buf_offset</td>
+<td>(len) * 4</td>
+<td>contiguous</td>
+<td>976</td>
+<td>14005540</td>
+</tr>
+<tr>
+<td>via_dma_in0_1</td>
+<td>main.cpp:380:5</td>
+<td>in0_offset</td>
+<td>(len) * 4</td>
+<td>contiguous</td>
+<td>976</td>
+<td>14005540</td>
+</tr>
+<td></td>
+<td></td>
+<td>len</td>
+<td>4</td>
+<td>paged</td>
+<td>0</td>
+<td>13</td>
+</tr>
+<td></td>
+<td></td>
+<td>data</td>
+<td>4</td>
+<td>paged</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>via_dma_in1_1</td>
+<td>main.cpp:381:5</td>
+<td>in1_offset</td>
+<td>(len) * 4</td>
+<td>contiguous</td>
+<td>976</td>
+<td>14005540</td>
+</tr>
+<td></td>
+<td></td>
+<td>len</td>
+<td>4</td>
+<td>paged</td>
+<td>0</td>
+<td>13</td>
+</tr>
+<td></td>
+<td></td>
+<td>weight</td>
+<td>4</td>
+<td>paged</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</body>
+<dmn>
+	<accel name="bgd_accel_1">
+		<arg name="valData" ipPort="valData" direction="IN" size="(size)*4" pragma="" connectionIpPort="via_dma_in0_1/data" connectionDm=""\>
+		<arg name="valWeight" ipPort="valWeight" direction="IN" size="(size)*4" pragma="" connectionIpPort="via_dma_in1_1/weight" connectionDm=""\>
+		<arg name="valGradient" ipPort="valGradient" direction="OUT" size="(size)*4" pragma="" connectionIpPort="s2mm_data_copy_1/fifo" connectionDm=""\>
+	</accel>
+	<accel name="s2mm_data_copy_1">
+		<arg name="fifo" ipPort="fifo" direction="IN" size="(size)*4" pragma="" connectionIpPort="bgd_accel_1/valGradient" connectionDm=""\>
+		<arg name="len" ipPort="len" direction="IN" size="4" pragma="" connectionIpPort="ps7_M_AXI_GP0" connectionDm="AXILITE"\>
+		<arg name="buf" ipPort="buf_offset" direction="OUT" size="(size)*4" pragma="" connectionIpPort="ps7_S_AXI_ACP" connectionDm="AXIMM"\>
+	</accel>
+	<accel name="via_dma_in0_1">
+		<arg name="in0" ipPort="in0_offset" direction="IN" size="(size)*4" pragma="" connectionIpPort="ps7_S_AXI_ACP" connectionDm="AXIMM"\>
+		<arg name="len" ipPort="len" direction="IN" size="4" pragma="" connectionIpPort="ps7_M_AXI_GP0" connectionDm="AXILITE"\>
+		<arg name="data" ipPort="data" direction="OUT" size="(size)*4" pragma="" connectionIpPort="bgd_accel_1/valData" connectionDm=""\>
+	</accel>
+	<accel name="via_dma_in1_1">
+		<arg name="in1" ipPort="in1_offset" direction="IN" size="(size)*4" pragma="" connectionIpPort="ps7_S_AXI_ACP" connectionDm="AXIMM"\>
+		<arg name="len" ipPort="len" direction="IN" size="4" pragma="" connectionIpPort="ps7_M_AXI_GP0" connectionDm="AXILITE"\>
+		<arg name="weight" ipPort="weight" direction="OUT" size="(size)*4" pragma="" connectionIpPort="bgd_accel_1/valWeight" connectionDm=""\>
+	</accel>
+	<call accel="bgd_accel_1" site="main.cpp:382:5">
+		<arg ipPort="valData" size="4" memType="paged" setup="" transfer=""/>
+		<arg ipPort="valWeight" size="4" memType="paged" setup="" transfer=""/>
+		<arg ipPort="valGradient" size="4" memType="paged" setup="" transfer=""/>
+	</call>
+	<call accel="s2mm_data_copy_1" site="main.cpp:383:5">
+		<arg ipPort="fifo" size="4" memType="paged" setup="" transfer=""/>
+		<arg ipPort="len" size="4" memType="paged" setup="0" transfer="13"/>
+		<arg ipPort="buf_offset" size="(len) * 4" memType="contiguous" setup="976" transfer="14005540"/>
+	</call>
+	<call accel="via_dma_in0_1" site="main.cpp:380:5">
+		<arg ipPort="in0_offset" size="(len) * 4" memType="contiguous" setup="976" transfer="14005540"/>
+		<arg ipPort="len" size="4" memType="paged" setup="0" transfer="13"/>
+		<arg ipPort="data" size="4" memType="paged" setup="" transfer=""/>
+	</call>
+	<call accel="via_dma_in1_1" site="main.cpp:381:5">
+		<arg ipPort="in1_offset" size="(len) * 4" memType="contiguous" setup="976" transfer="14005540"/>
+		<arg ipPort="len" size="4" memType="paged" setup="0" transfer="13"/>
+		<arg ipPort="weight" size="4" memType="paged" setup="" transfer=""/>
+	</call>
+</dmn>
+</html>

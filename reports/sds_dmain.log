@@ -1,0 +1,311 @@
+(c) Copyright 2012-2019 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2019.1 SW Build 2552052 on Fri May 24 14:48:04 MDT 2019
+# Start time    : Fri Apr 24 10:24:55 CST 2020
+# Command line  : sds++ -Wall -O3 -I../src -c -fmessage-length=0 -MTsrc/dmain.o -MMD -MP -MFsrc/dmain.d -MTsrc/dmain.o -o src/dmain.o ../src/dmain.cpp -sds-hw bgd_accel lrbgd.cpp -clkid 2 -sds-end -sds-hw s2mm_data_copy dmain.cpp -clkid 2 -sds-end -sds-hw via_dma_in0 dmain.cpp -clkid 2 -sds-end -sds-hw via_dma_in1 dmain.cpp -clkid 2 -sds-end -sds-sys-config linux -sds-proc linux -sds-pf zc706
+# Log file      : /home/roy/workspace/via_bgd/Release/_sds/reports/sds_dmain.log
+# Journal file  : /home/roy/workspace/via_bgd/Release/_sds/reports/sds_dmain.jou
+# Report file   : /home/roy/workspace/via_bgd/Release/_sds/reports/sds_dmain.rpt
+#-----------------------------------------------------------
+
+Analyzing source for RTL template usage
+/home/roy/sdsoc/SDx/2019.1/bin/rtl_template_extract  /home/roy/workspace/via_bgd/src/dmain.cpp  -save-query /home/roy/workspace/via_bgd/Release/_sds/.llvm/src/dmain.rtlx  --  -c  -I../src  -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__  
+    -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g -w      -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I /home/roy/sdsoc/Vivado/2019.1/include   -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0 -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/arm-linux-gnueabihf -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/backward -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include-fixed -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include  -std=c++11
+Create data motion intermediate representation
+/home/roy/sdsoc/SDx/2019.1/bin/clang_wrapper  -I../src  -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__  -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g       -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I /home/roy/sdsoc/Vivado/2019.1/include   -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0 -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/arm-linux-gnueabihf -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/backward -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include-fixed -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include  -std=c++11  -emit-llvm -S /home/roy/workspace/via_bgd/src/dmain.cpp -o /home/roy/workspace/via_bgd/Release/_sds/.llvm/src/dmain.s
+Performing accelerator source linting for s2mm_data_copy
+/home/roy/sdsoc/SDx/2019.1/bin/sdslint -target cortex-a9 -func "s2mm_data_copy" /home/roy/workspace/via_bgd/src/dmain.cpp -- -c -I../src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g -w      -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I /home/roy/sdsoc/Vivado/2019.1/include   -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0 -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/arm-linux-gnueabihf -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/backward -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include-fixed -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include  -std=c++11
+Performing accelerator source linting for via_dma_in0
+/home/roy/sdsoc/SDx/2019.1/bin/sdslint -target cortex-a9 -func "via_dma_in0" /home/roy/workspace/via_bgd/src/dmain.cpp -- -c -I../src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g -w      -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I /home/roy/sdsoc/Vivado/2019.1/include   -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0 -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/arm-linux-gnueabihf -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/backward -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include-fixed -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include  -std=c++11
+Performing accelerator source linting for via_dma_in1
+/home/roy/sdsoc/SDx/2019.1/bin/sdslint -target cortex-a9 -func "via_dma_in1" /home/roy/workspace/via_bgd/src/dmain.cpp -- -c -I../src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g -w      -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I /home/roy/sdsoc/Vivado/2019.1/include   -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0 -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/arm-linux-gnueabihf -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/backward -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include-fixed -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include  -std=c++11
+arm-linux-gnueabihf-g++ -c /home/roy/workspace/via_bgd/Release/_sds/swstubs/dmain.cpp -o /home/roy/workspace/via_bgd/Release/_sds/swstubs/dmain.o
+arm-linux-gnueabihf-objcopy --add-section .xdinfo=/home/roy/workspace/via_bgd/Release/_sds/swstubs/dmain.o.xml /home/roy/workspace/via_bgd/Release/_sds/swstubs/dmain.o
+Performing pragma generation
+/home/roy/sdsoc/SDx/2019.1/bin/clang_wrapper -E -I/home/roy/workspace/via_bgd/src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -m32 -D HLS_NO_XIL_FPO_LIB -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include -I/home/roy/workspace/via_bgd/src -D __SDSVHLS__ -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g -w      -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I /home/roy/sdsoc/Vivado/2019.1/include   -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0 -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/arm-linux-gnueabihf -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/backward -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include-fixed -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include  -std=c++11 /home/roy/workspace/via_bgd/src/dmain.cpp -o /home/roy/workspace/via_bgd/Release/_sds/vhls/dmain_pp.cpp
+/home/roy/sdsoc/SDx/2019.1/bin/pragma_gen  -func "s2mm_data_copy"   -tcl /home/roy/workspace/via_bgd/Release/_sds/vhls/s2mm_data_copy.tcl   /home/roy/workspace/via_bgd/Release/_sds/vhls/dmain_pp.cpp -multi_aximm   --  -c  -D __SDSVHLS__ -I/home/roy/workspace/via_bgd/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__ -m32      -D HLS_NO_XIL_FPO_LIB  -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include -I/home/roy/workspace/via_bgd/src  -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g -w      -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I /home/roy/sdsoc/Vivado/2019.1/include   -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0 -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/arm-linux-gnueabihf -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/backward -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include-fixed -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include  -std=c++11
+WARNING: [PragmaGen 83-3203] VHLS interface pragma "axis" has been specified for argument: "fifo", no directives will be generated by SDSoC!
+INFO: [PragmaGen 83-3231] Successfully generated tcl script: /home/roy/workspace/via_bgd/Release/_sds/vhls/s2mm_data_copy.tcl
+Moving function s2mm_data_copy to Programmable Logic
+/home/roy/sdsoc/Vivado/2019.1/bin/vivado_hls /home/roy/workspace/via_bgd/Release/_sds/vhls/s2mm_data_copy_run.tcl -l s2mm_data_copy_vivado_hls.log
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source /home/roy/sdsoc/Vivado/2019.1/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/home/roy/sdsoc/Vivado/2019.1/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'roy' on host 'slave1' (Linux_x86_64 version 3.10.0-1062.18.1.el7.x86_64) on Fri Apr 24 10:25:06 CST 2020
+INFO: [HLS 200-10] In directory '/home/roy/workspace/via_bgd/Release/_sds/vhls'
+Sourcing Tcl script '/home/roy/workspace/via_bgd/Release/_sds/vhls/s2mm_data_copy_run.tcl'
+INFO: [HLS 200-10] Creating and opening project '/home/roy/workspace/via_bgd/Release/_sds/vhls/s2mm_data_copy'.
+INFO: [HLS 200-10] Adding design file '/home/roy/workspace/via_bgd/src/dmain.cpp' to the project
+INFO: [HLS 200-10] Creating and opening solution '/home/roy/workspace/via_bgd/Release/_sds/vhls/s2mm_data_copy/solution'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-10] Setting target device to 'xc7z045-ffg900-2'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=0
+INFO: [HLS 200-435] Setting 'config_export -vivado_optimization_level' configuration: config_export -vivado_phys_opt=none
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_rtl -module_auto_prefix=1
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty 27%
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2.7ns.
+WARNING: [HLS 200-483] The 'config_rtl -prefix' command is deprecated and will be removed in a future release. Use 'config_rtl -module_prefix' as its replacement.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file '/home/roy/workspace/via_bgd/src/dmain.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 916.445 ; gain = 128.000 ; free physical = 157 ; free virtual = 5285
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 916.445 ; gain = 128.000 ; free physical = 157 ; free virtual = 5285
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 916.445 ; gain = 128.000 ; free physical = 154 ; free virtual = 5283
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 916.445 ; gain = 128.000 ; free physical = 154 ; free virtual = 5283
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 916.445 ; gain = 128.000 ; free physical = 141 ; free virtual = 5270
+INFO: [HLS 200-444] Inferring multiple bus burst write of variable length on port 'buf' (/home/roy/workspace/via_bgd/src/dmain.cpp:67:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 916.445 ; gain = 128.000 ; free physical = 141 ; free virtual = 5270
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 's2mm_data_copy' ...
+WARNING: [SYN 201-107] Renaming port name 's2mm_data_copy/buf' to 's2mm_data_copy/buf_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 's2mm_data_copy' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+WARNING: [SCHED 204-71] Latency directive discarded for region s2mm_data_copy since it contains subloops.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 9.07 seconds; current allocated memory: 97.101 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 97.260 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 's2mm_data_copy' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 's2mm_data_copy/buf_r' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 's2mm_data_copy/fifo' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 's2mm_data_copy/len' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 's2mm_data_copy/buf_offset' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 's2mm_data_copy' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 's2mm_data_copy'.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 97.977 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 916.445 ; gain = 128.000 ; free physical = 136 ; free virtual = 5267
+INFO: [VHDL 208-304] Generating VHDL RTL for s2mm_data_copy with prefix a0_.
+INFO: [VLOG 209-307] Generating Verilog RTL for s2mm_data_copy with prefix a0_.
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/roy/sdsoc/Vivado/2019.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 24 10:25:59 2020...
+INFO: [HLS 200-112] Total elapsed time: 53.78 seconds; peak allocated memory: 97.977 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Fri Apr 24 10:26:00 2020...
+/usr/bin/sed -i -e {s/xilinx\.com\/xidane/xilinx\.com\/xd/g} /home/roy/workspace/via_bgd/Release/_sds/vhls/s2mm_data_copy/solution/impl/ip/auxiliary.xml
+/home/roy/sdsoc/SDx/2019.1/bin/xsltproc  --output /home/roy/workspace/via_bgd/Release/_sds/.llvm/s2mm_data_copy.hlsmap1.xml  --stringparam P_CLKID 2  --stringparam P_HLS_TYPE hls   /home/roy/sdsoc/SDx/2019.1/scripts/xsd/xdHlsmapRenameAttr.xsl  /home/roy/workspace/via_bgd/Release/_sds/.llvm/s2mm_data_copy_auxiliary.xml
+/home/roy/sdsoc/SDx/2019.1/bin/xsltproc  --output /home/roy/workspace/via_bgd/Release/_sds/.llvm/s2mm_data_copy.hlsmap.xml  /home/roy/sdsoc/SDx/2019.1/scripts/xsd/xdHlsmapAdapter.xsl  /home/roy/workspace/via_bgd/Release/_sds/.llvm/s2mm_data_copy.hlsmap1.xml
+/home/roy/sdsoc/SDx/2019.1/bin/xsltproc    --output /home/roy/workspace/via_bgd/Release/_sds/.llvm/s2mm_data_copy.fcnmap.xml  /home/roy/sdsoc/SDx/2019.1/scripts/xsd/xdHlsmapAxi4.xsl  /home/roy/workspace/via_bgd/Release/_sds/.llvm/s2mm_data_copy.hlsmap.xml
+/home/roy/sdsoc/SDx/2019.1/bin/xsltproc  --output /home/roy/workspace/via_bgd/Release/_sds/.llvm/s2mm_data_copy_if.xml  --stringparam P_ADAPTER_COMPREF adapter_v3_0  /home/roy/sdsoc/SDx/2019.1/scripts/xsd/xdHlsAdapterComp.xsl  /home/roy/workspace/via_bgd/Release/_sds/.llvm/s2mm_data_copy.fcnmap.xml
+arm-linux-gnueabihf-objcopy --add-section .xddata=/home/roy/workspace/via_bgd/Release/_sds/swstubs/s2mm_data_copy.xml /home/roy/workspace/via_bgd/Release/_sds/swstubs/dmain.o
+arm-linux-gnueabihf-objcopy --add-section .xdasm=/home/roy/workspace/via_bgd/Release/_sds/.llvm/src/dmain.s /home/roy/workspace/via_bgd/Release/_sds/swstubs/dmain.o
+arm-linux-gnueabihf-g++ -E -I../src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__ -MT/home/roy/workspace/via_bgd/Release/src/dmain.o -MF/home/roy/workspace/via_bgd/Release/src/dmain.d -MT/home/roy/workspace/via_bgd/Release/src/dmain.o       -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I /home/roy/sdsoc/Vivado/2019.1/include /home/roy/workspace/via_bgd/src/dmain.cpp -o /home/roy/workspace/via_bgd/Release/_sds/.pp/dmain.iix
+arm-linux-gnueabihf-objcopy --add-section .xdpp=/home/roy/workspace/via_bgd/Release/_sds/.pp/dmain.ii /home/roy/workspace/via_bgd/Release/_sds/swstubs/dmain.o
+arm-linux-gnueabihf-objcopy --add-section .xdfcnmap=/home/roy/workspace/via_bgd/Release/_sds/.llvm/s2mm_data_copy.fcnmap.xml /home/roy/workspace/via_bgd/Release/_sds/swstubs/dmain.o
+arm-linux-gnueabihf-objcopy --add-section .xdhlscore=/home/roy/workspace/via_bgd/Release/_sds/vhls/s2mm_data_copy/solution/impl/ip/xilinx_com_hls_s2mm_data_copy_1_0.zip /home/roy/workspace/via_bgd/Release/_sds/swstubs/dmain.o
+arm-linux-gnueabihf-objcopy --add-section .xdif=/home/roy/workspace/via_bgd/Release/_sds/.llvm/s2mm_data_copy_if.xml /home/roy/workspace/via_bgd/Release/_sds/swstubs/dmain.o
+Performing pragma generation
+/home/roy/sdsoc/SDx/2019.1/bin/clang_wrapper -E -I/home/roy/workspace/via_bgd/src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -m32 -D HLS_NO_XIL_FPO_LIB -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include -I/home/roy/workspace/via_bgd/src -D __SDSVHLS__ -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g -w      -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I /home/roy/sdsoc/Vivado/2019.1/include   -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0 -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/arm-linux-gnueabihf -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/backward -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include-fixed -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include  -std=c++11 /home/roy/workspace/via_bgd/src/dmain.cpp -o /home/roy/workspace/via_bgd/Release/_sds/vhls/dmain_pp.cpp
+/home/roy/sdsoc/SDx/2019.1/bin/pragma_gen  -func "via_dma_in0"   -tcl /home/roy/workspace/via_bgd/Release/_sds/vhls/via_dma_in0.tcl   /home/roy/workspace/via_bgd/Release/_sds/vhls/dmain_pp.cpp -multi_aximm   --  -c  -D __SDSVHLS__ -I/home/roy/workspace/via_bgd/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__ -m32      -D HLS_NO_XIL_FPO_LIB  -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include -I/home/roy/workspace/via_bgd/src  -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g -w      -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I /home/roy/sdsoc/Vivado/2019.1/include   -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0 -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/arm-linux-gnueabihf -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/backward -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include-fixed -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include  -std=c++11
+WARNING: [PragmaGen 83-3203] VHLS interface pragma "axis" has been specified for argument: "data", no directives will be generated by SDSoC!
+INFO: [PragmaGen 83-3231] Successfully generated tcl script: /home/roy/workspace/via_bgd/Release/_sds/vhls/via_dma_in0.tcl
+Moving function via_dma_in0 to Programmable Logic
+/home/roy/sdsoc/Vivado/2019.1/bin/vivado_hls /home/roy/workspace/via_bgd/Release/_sds/vhls/via_dma_in0_run.tcl -l via_dma_in0_vivado_hls.log
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source /home/roy/sdsoc/Vivado/2019.1/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/home/roy/sdsoc/Vivado/2019.1/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'roy' on host 'slave1' (Linux_x86_64 version 3.10.0-1062.18.1.el7.x86_64) on Fri Apr 24 10:26:06 CST 2020
+INFO: [HLS 200-10] In directory '/home/roy/workspace/via_bgd/Release/_sds/vhls'
+Sourcing Tcl script '/home/roy/workspace/via_bgd/Release/_sds/vhls/via_dma_in0_run.tcl'
+INFO: [HLS 200-10] Creating and opening project '/home/roy/workspace/via_bgd/Release/_sds/vhls/via_dma_in0'.
+INFO: [HLS 200-10] Adding design file '/home/roy/workspace/via_bgd/src/dmain.cpp' to the project
+INFO: [HLS 200-10] Creating and opening solution '/home/roy/workspace/via_bgd/Release/_sds/vhls/via_dma_in0/solution'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-10] Setting target device to 'xc7z045-ffg900-2'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=0
+INFO: [HLS 200-435] Setting 'config_export -vivado_optimization_level' configuration: config_export -vivado_phys_opt=none
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_rtl -module_auto_prefix=1
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty 27%
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2.7ns.
+WARNING: [HLS 200-483] The 'config_rtl -prefix' command is deprecated and will be removed in a future release. Use 'config_rtl -module_prefix' as its replacement.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file '/home/roy/workspace/via_bgd/src/dmain.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 916.445 ; gain = 128.000 ; free physical = 245 ; free virtual = 5177
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 916.445 ; gain = 128.000 ; free physical = 245 ; free virtual = 5177
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 916.445 ; gain = 128.000 ; free physical = 245 ; free virtual = 5177
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 916.445 ; gain = 128.000 ; free physical = 245 ; free virtual = 5177
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 916.445 ; gain = 128.000 ; free physical = 232 ; free virtual = 5164
+INFO: [HLS 200-444] Inferring multiple bus burst read of variable length on port 'in0' (/home/roy/workspace/via_bgd/src/dmain.cpp:45:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 916.445 ; gain = 128.000 ; free physical = 232 ; free virtual = 5164
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'via_dma_in0' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'via_dma_in0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+WARNING: [SCHED 204-71] Latency directive discarded for region via_dma_in0 since it contains subloops.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 8.59 seconds; current allocated memory: 97.021 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 97.214 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'via_dma_in0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'via_dma_in0/in0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'via_dma_in0/in0_offset' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'via_dma_in0/len' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'via_dma_in0/data' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'via_dma_in0' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'via_dma_in0'.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 97.892 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 916.445 ; gain = 128.000 ; free physical = 230 ; free virtual = 5163
+INFO: [VHDL 208-304] Generating VHDL RTL for via_dma_in0 with prefix a1_.
+INFO: [VLOG 209-307] Generating Verilog RTL for via_dma_in0 with prefix a1_.
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/roy/sdsoc/Vivado/2019.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 24 10:26:25 2020...
+INFO: [HLS 200-112] Total elapsed time: 19.59 seconds; peak allocated memory: 97.892 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Fri Apr 24 10:26:25 2020...
+/usr/bin/sed -i -e {s/xilinx\.com\/xidane/xilinx\.com\/xd/g} /home/roy/workspace/via_bgd/Release/_sds/vhls/via_dma_in0/solution/impl/ip/auxiliary.xml
+/home/roy/sdsoc/SDx/2019.1/bin/xsltproc  --output /home/roy/workspace/via_bgd/Release/_sds/.llvm/via_dma_in0.hlsmap1.xml  --stringparam P_CLKID 2  --stringparam P_HLS_TYPE hls   /home/roy/sdsoc/SDx/2019.1/scripts/xsd/xdHlsmapRenameAttr.xsl  /home/roy/workspace/via_bgd/Release/_sds/.llvm/via_dma_in0_auxiliary.xml
+/home/roy/sdsoc/SDx/2019.1/bin/xsltproc  --output /home/roy/workspace/via_bgd/Release/_sds/.llvm/via_dma_in0.hlsmap.xml  /home/roy/sdsoc/SDx/2019.1/scripts/xsd/xdHlsmapAdapter.xsl  /home/roy/workspace/via_bgd/Release/_sds/.llvm/via_dma_in0.hlsmap1.xml
+/home/roy/sdsoc/SDx/2019.1/bin/xsltproc    --output /home/roy/workspace/via_bgd/Release/_sds/.llvm/via_dma_in0.fcnmap.xml  /home/roy/sdsoc/SDx/2019.1/scripts/xsd/xdHlsmapAxi4.xsl  /home/roy/workspace/via_bgd/Release/_sds/.llvm/via_dma_in0.hlsmap.xml
+/home/roy/sdsoc/SDx/2019.1/bin/xsltproc  --output /home/roy/workspace/via_bgd/Release/_sds/.llvm/via_dma_in0_if.xml  --stringparam P_ADAPTER_COMPREF adapter_v3_0  /home/roy/sdsoc/SDx/2019.1/scripts/xsd/xdHlsAdapterComp.xsl  /home/roy/workspace/via_bgd/Release/_sds/.llvm/via_dma_in0.fcnmap.xml
+arm-linux-gnueabihf-objcopy --add-section .xddata1=/home/roy/workspace/via_bgd/Release/_sds/swstubs/via_dma_in0.xml /home/roy/workspace/via_bgd/Release/_sds/swstubs/dmain.o
+arm-linux-gnueabihf-objcopy --add-section .xdfcnmap1=/home/roy/workspace/via_bgd/Release/_sds/.llvm/via_dma_in0.fcnmap.xml /home/roy/workspace/via_bgd/Release/_sds/swstubs/dmain.o
+arm-linux-gnueabihf-objcopy --add-section .xdhlscore1=/home/roy/workspace/via_bgd/Release/_sds/vhls/via_dma_in0/solution/impl/ip/xilinx_com_hls_via_dma_in0_1_0.zip /home/roy/workspace/via_bgd/Release/_sds/swstubs/dmain.o
+arm-linux-gnueabihf-objcopy --add-section .xdif1=/home/roy/workspace/via_bgd/Release/_sds/.llvm/via_dma_in0_if.xml /home/roy/workspace/via_bgd/Release/_sds/swstubs/dmain.o
+Performing pragma generation
+/home/roy/sdsoc/SDx/2019.1/bin/clang_wrapper -E -I/home/roy/workspace/via_bgd/src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -m32 -D HLS_NO_XIL_FPO_LIB -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include -I/home/roy/workspace/via_bgd/src -D __SDSVHLS__ -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g -w      -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I /home/roy/sdsoc/Vivado/2019.1/include   -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0 -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/arm-linux-gnueabihf -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/backward -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include-fixed -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include  -std=c++11 /home/roy/workspace/via_bgd/src/dmain.cpp -o /home/roy/workspace/via_bgd/Release/_sds/vhls/dmain_pp.cpp
+/home/roy/sdsoc/SDx/2019.1/bin/pragma_gen  -func "via_dma_in1"   -tcl /home/roy/workspace/via_bgd/Release/_sds/vhls/via_dma_in1.tcl   /home/roy/workspace/via_bgd/Release/_sds/vhls/dmain_pp.cpp -multi_aximm   --  -c  -D __SDSVHLS__ -I/home/roy/workspace/via_bgd/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__ -m32      -D HLS_NO_XIL_FPO_LIB  -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include -I/home/roy/workspace/via_bgd/src  -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g -w      -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I /home/roy/sdsoc/Vivado/2019.1/include   -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0 -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/arm-linux-gnueabihf -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/backward -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include-fixed -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include  -std=c++11
+WARNING: [PragmaGen 83-3203] VHLS interface pragma "axis" has been specified for argument: "weight", no directives will be generated by SDSoC!
+INFO: [PragmaGen 83-3231] Successfully generated tcl script: /home/roy/workspace/via_bgd/Release/_sds/vhls/via_dma_in1.tcl
+Moving function via_dma_in1 to Programmable Logic
+/home/roy/sdsoc/Vivado/2019.1/bin/vivado_hls /home/roy/workspace/via_bgd/Release/_sds/vhls/via_dma_in1_run.tcl -l via_dma_in1_vivado_hls.log
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source /home/roy/sdsoc/Vivado/2019.1/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/home/roy/sdsoc/Vivado/2019.1/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'roy' on host 'slave1' (Linux_x86_64 version 3.10.0-1062.18.1.el7.x86_64) on Fri Apr 24 10:26:28 CST 2020
+INFO: [HLS 200-10] In directory '/home/roy/workspace/via_bgd/Release/_sds/vhls'
+Sourcing Tcl script '/home/roy/workspace/via_bgd/Release/_sds/vhls/via_dma_in1_run.tcl'
+INFO: [HLS 200-10] Creating and opening project '/home/roy/workspace/via_bgd/Release/_sds/vhls/via_dma_in1'.
+INFO: [HLS 200-10] Adding design file '/home/roy/workspace/via_bgd/src/dmain.cpp' to the project
+INFO: [HLS 200-10] Creating and opening solution '/home/roy/workspace/via_bgd/Release/_sds/vhls/via_dma_in1/solution'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-10] Setting target device to 'xc7z045-ffg900-2'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=0
+INFO: [HLS 200-435] Setting 'config_export -vivado_optimization_level' configuration: config_export -vivado_phys_opt=none
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_rtl -module_auto_prefix=1
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty 27%
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2.7ns.
+WARNING: [HLS 200-483] The 'config_rtl -prefix' command is deprecated and will be removed in a future release. Use 'config_rtl -module_prefix' as its replacement.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file '/home/roy/workspace/via_bgd/src/dmain.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 916.445 ; gain = 128.000 ; free physical = 354 ; free virtual = 5174
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 916.445 ; gain = 128.000 ; free physical = 354 ; free virtual = 5174
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 916.445 ; gain = 128.000 ; free physical = 354 ; free virtual = 5174
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 916.445 ; gain = 128.000 ; free physical = 354 ; free virtual = 5174
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 916.445 ; gain = 128.000 ; free physical = 341 ; free virtual = 5162
+INFO: [HLS 200-444] Inferring multiple bus burst read of variable length on port 'in1' (/home/roy/workspace/via_bgd/src/dmain.cpp:57:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 916.445 ; gain = 128.000 ; free physical = 341 ; free virtual = 5162
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'via_dma_in1' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'via_dma_in1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+WARNING: [SCHED 204-71] Latency directive discarded for region via_dma_in1 since it contains subloops.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 8.39 seconds; current allocated memory: 97.006 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 97.214 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'via_dma_in1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'via_dma_in1/in1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'via_dma_in1/in1_offset' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'via_dma_in1/len' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'via_dma_in1/weight' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'via_dma_in1' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'via_dma_in1'.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 97.893 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 916.445 ; gain = 128.000 ; free physical = 339 ; free virtual = 5162
+INFO: [VHDL 208-304] Generating VHDL RTL for via_dma_in1 with prefix a2_.
+INFO: [VLOG 209-307] Generating Verilog RTL for via_dma_in1 with prefix a2_.
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/roy/sdsoc/Vivado/2019.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 24 10:26:47 2020...
+INFO: [HLS 200-112] Total elapsed time: 19.09 seconds; peak allocated memory: 97.893 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Fri Apr 24 10:26:47 2020...
+/usr/bin/sed -i -e {s/xilinx\.com\/xidane/xilinx\.com\/xd/g} /home/roy/workspace/via_bgd/Release/_sds/vhls/via_dma_in1/solution/impl/ip/auxiliary.xml
+/home/roy/sdsoc/SDx/2019.1/bin/xsltproc  --output /home/roy/workspace/via_bgd/Release/_sds/.llvm/via_dma_in1.hlsmap1.xml  --stringparam P_CLKID 2  --stringparam P_HLS_TYPE hls   /home/roy/sdsoc/SDx/2019.1/scripts/xsd/xdHlsmapRenameAttr.xsl  /home/roy/workspace/via_bgd/Release/_sds/.llvm/via_dma_in1_auxiliary.xml
+/home/roy/sdsoc/SDx/2019.1/bin/xsltproc  --output /home/roy/workspace/via_bgd/Release/_sds/.llvm/via_dma_in1.hlsmap.xml  /home/roy/sdsoc/SDx/2019.1/scripts/xsd/xdHlsmapAdapter.xsl  /home/roy/workspace/via_bgd/Release/_sds/.llvm/via_dma_in1.hlsmap1.xml
+/home/roy/sdsoc/SDx/2019.1/bin/xsltproc    --output /home/roy/workspace/via_bgd/Release/_sds/.llvm/via_dma_in1.fcnmap.xml  /home/roy/sdsoc/SDx/2019.1/scripts/xsd/xdHlsmapAxi4.xsl  /home/roy/workspace/via_bgd/Release/_sds/.llvm/via_dma_in1.hlsmap.xml
+/home/roy/sdsoc/SDx/2019.1/bin/xsltproc  --output /home/roy/workspace/via_bgd/Release/_sds/.llvm/via_dma_in1_if.xml  --stringparam P_ADAPTER_COMPREF adapter_v3_0  /home/roy/sdsoc/SDx/2019.1/scripts/xsd/xdHlsAdapterComp.xsl  /home/roy/workspace/via_bgd/Release/_sds/.llvm/via_dma_in1.fcnmap.xml
+arm-linux-gnueabihf-objcopy --add-section .xddata2=/home/roy/workspace/via_bgd/Release/_sds/swstubs/via_dma_in1.xml /home/roy/workspace/via_bgd/Release/_sds/swstubs/dmain.o
+arm-linux-gnueabihf-objcopy --add-section .xdfcnmap2=/home/roy/workspace/via_bgd/Release/_sds/.llvm/via_dma_in1.fcnmap.xml /home/roy/workspace/via_bgd/Release/_sds/swstubs/dmain.o
+arm-linux-gnueabihf-objcopy --add-section .xdhlscore2=/home/roy/workspace/via_bgd/Release/_sds/vhls/via_dma_in1/solution/impl/ip/xilinx_com_hls_via_dma_in1_1_0.zip /home/roy/workspace/via_bgd/Release/_sds/swstubs/dmain.o
+arm-linux-gnueabihf-objcopy --add-section .xdif2=/home/roy/workspace/via_bgd/Release/_sds/.llvm/via_dma_in1_if.xml /home/roy/workspace/via_bgd/Release/_sds/swstubs/dmain.o
+sds++ log file saved as /home/roy/workspace/via_bgd/Release/_sds/reports/sds_dmain.log
+sds++ completed at Fri Apr 24 10:26:47 CST 2020

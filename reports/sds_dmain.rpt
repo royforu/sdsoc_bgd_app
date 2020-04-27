@@ -1,0 +1,15 @@
+(c) Copyright 2012-2019 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2019.1 SW Build 2552052 on Fri May 24 14:48:04 MDT 2019
+# Start time    : Fri Apr 24 10:24:55 CST 2020
+# Command line  : sds++ -Wall -O3 -I../src -c -fmessage-length=0 -MTsrc/dmain.o -MMD -MP -MFsrc/dmain.d -MTsrc/dmain.o -o src/dmain.o ../src/dmain.cpp -sds-hw bgd_accel lrbgd.cpp -clkid 2 -sds-end -sds-hw s2mm_data_copy dmain.cpp -clkid 2 -sds-end -sds-hw via_dma_in0 dmain.cpp -clkid 2 -sds-end -sds-hw via_dma_in1 dmain.cpp -clkid 2 -sds-end -sds-sys-config linux -sds-proc linux -sds-pf zc706
+# Log file      : /home/roy/workspace/via_bgd/Release/_sds/reports/sds_dmain.log
+# Journal file  : /home/roy/workspace/via_bgd/Release/_sds/reports/sds_dmain.jou
+# Report file   : /home/roy/workspace/via_bgd/Release/_sds/reports/sds_dmain.rpt
+#-----------------------------------------------------------
+
+High-Level Synthesis
+--------------------
+
+  Vivado HLS Report : file not found : /home/roy/workspace/via_bgd/Release/_sds/vhls/s2mm_data_copy via_dma_in0 via_dma_in1/solution/syn/report/s2mm_data_copy via_dma_in0 via_dma_in1_csynth.rpt
+

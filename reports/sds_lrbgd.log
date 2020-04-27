@@ -1,0 +1,473 @@
+(c) Copyright 2012-2019 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2019.1 SW Build 2552052 on Fri May 24 14:48:04 MDT 2019
+# Start time    : Fri Apr 24 10:26:47 CST 2020
+# Command line  : sds++ -Wall -O3 -I../src -c -fmessage-length=0 -MTsrc/lrbgd.o -MMD -MP -MFsrc/lrbgd.d -MTsrc/lrbgd.o -o src/lrbgd.o ../src/lrbgd.cpp -sds-hw bgd_accel lrbgd.cpp -clkid 2 -sds-end -sds-hw s2mm_data_copy dmain.cpp -clkid 2 -sds-end -sds-hw via_dma_in0 dmain.cpp -clkid 2 -sds-end -sds-hw via_dma_in1 dmain.cpp -clkid 2 -sds-end -sds-sys-config linux -sds-proc linux -sds-pf zc706
+# Log file      : /home/roy/workspace/via_bgd/Release/_sds/reports/sds_lrbgd.log
+# Journal file  : /home/roy/workspace/via_bgd/Release/_sds/reports/sds_lrbgd.jou
+# Report file   : /home/roy/workspace/via_bgd/Release/_sds/reports/sds_lrbgd.rpt
+#-----------------------------------------------------------
+
+Analyzing source for RTL template usage
+/home/roy/sdsoc/SDx/2019.1/bin/rtl_template_extract  /home/roy/workspace/via_bgd/src/lrbgd.cpp  -save-query /home/roy/workspace/via_bgd/Release/_sds/.llvm/src/lrbgd.rtlx  --  -c  -I../src  -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__  
+    -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g -w      -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I /home/roy/sdsoc/Vivado/2019.1/include   -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0 -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/arm-linux-gnueabihf -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/backward -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include-fixed -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include  -std=c++11
+Create data motion intermediate representation
+/home/roy/sdsoc/SDx/2019.1/bin/clang_wrapper  -I../src  -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__  -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g       -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I /home/roy/sdsoc/Vivado/2019.1/include   -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0 -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/arm-linux-gnueabihf -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/backward -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include-fixed -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include  -std=c++11  -emit-llvm -S /home/roy/workspace/via_bgd/src/lrbgd.cpp -o /home/roy/workspace/via_bgd/Release/_sds/.llvm/src/lrbgd.s
+/home/roy/workspace/via_bgd/src/lrbgd.cpp:460:1: warning: unused label '_SEND_GRADIENT_' [-Wunused-label]
+_SEND_GRADIENT_:
+^~~~~~~~~~~~~~~~
+/home/roy/workspace/via_bgd/src/lrbgd.cpp:396:1: warning: unused label '_RECV_WEIGHT_' [-Wunused-label]
+_RECV_WEIGHT_:
+^~~~~~~~~~~~~~
+/home/roy/workspace/via_bgd/src/lrbgd.cpp:423:1: warning: unused label '_RECV_DATA_' [-Wunused-label]
+_RECV_DATA_:
+^~~~~~~~~~~~
+/home/roy/workspace/via_bgd/src/lrbgd.cpp:447:1: warning: unused label '_GRADIENT_CALC_' [-Wunused-label]
+_GRADIENT_CALC_:
+^~~~~~~~~~~~~~~~
+/home/roy/workspace/via_bgd/src/lrbgd.cpp:420:1: warning: unused label '_CHUNKS_LOOP_' [-Wunused-label]
+_CHUNKS_LOOP_:
+^~~~~~~~~~~~~~
+/home/roy/workspace/via_bgd/src/lrbgd.cpp:511:2: warning: unused label '_DIFF_CALC_' [-Wunused-label]
+        _DIFF_CALC_:
+        ^~~~~~~~~~~~
+/home/roy/workspace/via_bgd/src/lrbgd.cpp:489:2: warning: unused label '_DOT_CALC0_' [-Wunused-label]
+        _DOT_CALC0_:
+        ^~~~~~~~~~~~
+/home/roy/workspace/via_bgd/src/lrbgd.cpp:516:2: warning: unused label '_ACC_CALC_ALL_' [-Wunused-label]
+        _ACC_CALC_ALL_:
+        ^~~~~~~~~~~~~~~
+/home/roy/workspace/via_bgd/src/lrbgd.cpp:499:3: warning: unused label '_DOT_CALC_LP' [-Wunused-label]
+                _DOT_CALC_LP:
+                ^~~~~~~~~~~~~
+/home/roy/workspace/via_bgd/src/lrbgd.cpp:495:2: warning: unused label '_DOT_CALC_ALL_' [-Wunused-label]
+        _DOT_CALC_ALL_:
+        ^~~~~~~~~~~~~~~
+/home/roy/workspace/via_bgd/src/lrbgd.cpp:505:2: warning: unused label '_DOT_CALC1_' [-Wunused-label]
+        _DOT_CALC1_:
+        ^~~~~~~~~~~~
+/home/roy/workspace/via_bgd/src/lrbgd.cpp:534:2: warning: unused label '_DOT_CALC0_' [-Wunused-label]
+        _DOT_CALC0_:
+        ^~~~~~~~~~~~
+/home/roy/workspace/via_bgd/src/lrbgd.cpp:544:3: warning: unused label '_DOT_CALC_LP' [-Wunused-label]
+                _DOT_CALC_LP:
+                ^~~~~~~~~~~~~
+/home/roy/workspace/via_bgd/src/lrbgd.cpp:561:2: warning: unused label '_ACC_CALC_ALL_' [-Wunused-label]
+        _ACC_CALC_ALL_:
+        ^~~~~~~~~~~~~~~
+/home/roy/workspace/via_bgd/src/lrbgd.cpp:550:2: warning: unused label '_DOT_CALC1_' [-Wunused-label]
+        _DOT_CALC1_:
+        ^~~~~~~~~~~~
+/home/roy/workspace/via_bgd/src/lrbgd.cpp:556:2: warning: unused label '_DIFF_CALC_' [-Wunused-label]
+        _DIFF_CALC_:
+        ^~~~~~~~~~~~
+/home/roy/workspace/via_bgd/src/lrbgd.cpp:540:2: warning: unused label '_DOT_CALC_ALL_' [-Wunused-label]
+        _DOT_CALC_ALL_:
+        ^~~~~~~~~~~~~~~
+/home/roy/workspace/via_bgd/src/lrbgd.cpp:590:3: warning: unused label '_DOT_CALC_LP' [-Wunused-label]
+                _DOT_CALC_LP:
+                ^~~~~~~~~~~~~
+/home/roy/workspace/via_bgd/src/lrbgd.cpp:586:2: warning: unused label '_DOT_CALC_ALL_' [-Wunused-label]
+        _DOT_CALC_ALL_:
+        ^~~~~~~~~~~~~~~
+/home/roy/workspace/via_bgd/src/lrbgd.cpp:602:2: warning: unused label '_DIFF_CALC_' [-Wunused-label]
+        _DIFF_CALC_:
+        ^~~~~~~~~~~~
+/home/roy/workspace/via_bgd/src/lrbgd.cpp:580:2: warning: unused label '_DOT_CALC0_' [-Wunused-label]
+        _DOT_CALC0_:
+        ^~~~~~~~~~~~
+/home/roy/workspace/via_bgd/src/lrbgd.cpp:596:2: warning: unused label '_DOT_CALC1_' [-Wunused-label]
+        _DOT_CALC1_:
+        ^~~~~~~~~~~~
+/home/roy/workspace/via_bgd/src/lrbgd.cpp:607:2: warning: unused label '_ACC_CALC_ALL_' [-Wunused-label]
+        _ACC_CALC_ALL_:
+        ^~~~~~~~~~~~~~~
+/home/roy/workspace/via_bgd/src/lrbgd.cpp:634:3: warning: unused label '_DOT_CALC_LP' [-Wunused-label]
+                _DOT_CALC_LP:
+                ^~~~~~~~~~~~~
+/home/roy/workspace/via_bgd/src/lrbgd.cpp:640:2: warning: unused label '_DOT_CALC1_' [-Wunused-label]
+        _DOT_CALC1_:
+        ^~~~~~~~~~~~
+/home/roy/workspace/via_bgd/src/lrbgd.cpp:651:2: warning: unused label '_ACC_CALC_ALL_' [-Wunused-label]
+        _ACC_CALC_ALL_:
+        ^~~~~~~~~~~~~~~
+/home/roy/workspace/via_bgd/src/lrbgd.cpp:624:2: warning: unused label '_DOT_CALC0_' [-Wunused-label]
+        _DOT_CALC0_:
+        ^~~~~~~~~~~~
+/home/roy/workspace/via_bgd/src/lrbgd.cpp:630:2: warning: unused label '_DOT_CALC_ALL_' [-Wunused-label]
+        _DOT_CALC_ALL_:
+        ^~~~~~~~~~~~~~~
+/home/roy/workspace/via_bgd/src/lrbgd.cpp:646:2: warning: unused label '_DIFF_CALC_' [-Wunused-label]
+        _DIFF_CALC_:
+        ^~~~~~~~~~~~
+/home/roy/workspace/via_bgd/src/lrbgd.cpp:668:2: warning: unused label '_DOT_CALC0_' [-Wunused-label]
+        _DOT_CALC0_:
+        ^~~~~~~~~~~~
+/home/roy/workspace/via_bgd/src/lrbgd.cpp:678:3: warning: unused label '_DOT_CALC_LP' [-Wunused-label]
+                _DOT_CALC_LP:
+                ^~~~~~~~~~~~~
+/home/roy/workspace/via_bgd/src/lrbgd.cpp:674:2: warning: unused label '_DOT_CALC_ALL_' [-Wunused-label]
+        _DOT_CALC_ALL_:
+        ^~~~~~~~~~~~~~~
+/home/roy/workspace/via_bgd/src/lrbgd.cpp:690:2: warning: unused label '_DIFF_CALC_' [-Wunused-label]
+        _DIFF_CALC_:
+        ^~~~~~~~~~~~
+/home/roy/workspace/via_bgd/src/lrbgd.cpp:695:2: warning: unused label '_ACC_CALC_ALL_' [-Wunused-label]
+        _ACC_CALC_ALL_:
+        ^~~~~~~~~~~~~~~
+/home/roy/workspace/via_bgd/src/lrbgd.cpp:684:2: warning: unused label '_DOT_CALC1_' [-Wunused-label]
+        _DOT_CALC1_:
+        ^~~~~~~~~~~~
+/home/roy/workspace/via_bgd/src/lrbgd.cpp:10:16: warning: unused variable 'gu32Chunks' [-Wunused-const-variable]
+const uint32_t gu32Chunks = NUM_CHUNKS;
+               ^
+/home/roy/workspace/via_bgd/src/lrbgd.cpp:11:16: warning: unused variable 'gu32Classes' [-Wunused-const-variable]
+const uint32_t gu32Classes = NUM_CLASSES;
+               ^
+/home/roy/workspace/via_bgd/src/lrbgd.cpp:12:16: warning: unused variable 'gu32Features' [-Wunused-const-variable]
+const uint32_t gu32Features = (NUM_FEATURES + 1);
+               ^
+/home/roy/workspace/via_bgd/src/lrbgd.cpp:13:16: warning: unused variable 'gu32Rows' [-Wunused-const-variable]
+const uint32_t gu32Rows = (NUM_PARALLELERS * (NUM_CLASSES + NUM_FEATURES + 1));
+               ^
+/home/roy/workspace/via_bgd/src/lrbgd.cpp:14:16: warning: unused variable 'gu32FactorNum' [-Wunused-const-variable]
+const uint32_t gu32FactorNum = 5; //((NUM_FEATURES + 1)/157);
+               ^
+Performing accelerator source linting for bgd_accel
+/home/roy/sdsoc/SDx/2019.1/bin/sdslint -target cortex-a9 -func "bgd_accel" /home/roy/workspace/via_bgd/src/lrbgd.cpp -- -c -I../src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g -w      -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I /home/roy/sdsoc/Vivado/2019.1/include   -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0 -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/arm-linux-gnueabihf -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/backward -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include-fixed -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include  -std=c++11
+arm-linux-gnueabihf-g++ -c /home/roy/workspace/via_bgd/Release/_sds/swstubs/lrbgd.cpp -o /home/roy/workspace/via_bgd/Release/_sds/swstubs/lrbgd.o
+arm-linux-gnueabihf-objcopy --add-section .xdinfo=/home/roy/workspace/via_bgd/Release/_sds/swstubs/lrbgd.o.xml /home/roy/workspace/via_bgd/Release/_sds/swstubs/lrbgd.o
+Performing pragma generation
+/home/roy/sdsoc/SDx/2019.1/bin/clang_wrapper -E -I/home/roy/workspace/via_bgd/src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -m32 -D HLS_NO_XIL_FPO_LIB -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include -I/home/roy/workspace/via_bgd/src -D __SDSVHLS__ -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g -w      -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I /home/roy/sdsoc/Vivado/2019.1/include   -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0 -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/arm-linux-gnueabihf -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/backward -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include-fixed -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include  -std=c++11 /home/roy/workspace/via_bgd/src/lrbgd.cpp -o /home/roy/workspace/via_bgd/Release/_sds/vhls/lrbgd_pp.cpp
+/home/roy/sdsoc/SDx/2019.1/bin/pragma_gen  -func "bgd_accel"   -tcl /home/roy/workspace/via_bgd/Release/_sds/vhls/bgd_accel.tcl   /home/roy/workspace/via_bgd/Release/_sds/vhls/lrbgd_pp.cpp -multi_aximm   --  -c  -D __SDSVHLS__ -I/home/roy/workspace/via_bgd/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__ -m32      -D HLS_NO_XIL_FPO_LIB  -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include -I/home/roy/workspace/via_bgd/src  -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g -w      -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I /home/roy/sdsoc/Vivado/2019.1/include   -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0 -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/arm-linux-gnueabihf -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/backward -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include-fixed -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include  -std=c++11
+WARNING: [PragmaGen 83-3203] VHLS interface pragma "axis" has been specified for argument: "valGradient", no directives will be generated by SDSoC!
+WARNING: [PragmaGen 83-3203] VHLS interface pragma "axis" has been specified for argument: "valWeight", no directives will be generated by SDSoC!
+WARNING: [PragmaGen 83-3203] VHLS interface pragma "axis" has been specified for argument: "valData", no directives will be generated by SDSoC!
+INFO: [PragmaGen 83-3231] Successfully generated tcl script: /home/roy/workspace/via_bgd/Release/_sds/vhls/bgd_accel.tcl
+Moving function bgd_accel to Programmable Logic
+/home/roy/sdsoc/Vivado/2019.1/bin/vivado_hls /home/roy/workspace/via_bgd/Release/_sds/vhls/bgd_accel_run.tcl -l bgd_accel_vivado_hls.log
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source /home/roy/sdsoc/Vivado/2019.1/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/home/roy/sdsoc/Vivado/2019.1/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'roy' on host 'slave1' (Linux_x86_64 version 3.10.0-1062.18.1.el7.x86_64) on Fri Apr 24 10:26:52 CST 2020
+INFO: [HLS 200-10] In directory '/home/roy/workspace/via_bgd/Release/_sds/vhls'
+Sourcing Tcl script '/home/roy/workspace/via_bgd/Release/_sds/vhls/bgd_accel_run.tcl'
+INFO: [HLS 200-10] Creating and opening project '/home/roy/workspace/via_bgd/Release/_sds/vhls/bgd_accel'.
+INFO: [HLS 200-10] Adding design file '/home/roy/workspace/via_bgd/src/lrbgd.cpp' to the project
+INFO: [HLS 200-10] Creating and opening solution '/home/roy/workspace/via_bgd/Release/_sds/vhls/bgd_accel/solution'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-10] Setting target device to 'xc7z045-ffg900-2'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=0
+INFO: [HLS 200-435] Setting 'config_export -vivado_optimization_level' configuration: config_export -vivado_phys_opt=none
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_rtl -module_auto_prefix=1
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty 27%
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2.7ns.
+WARNING: [HLS 200-483] The 'config_rtl -prefix' command is deprecated and will be removed in a future release. Use 'config_rtl -module_prefix' as its replacement.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file '/home/roy/workspace/via_bgd/src/lrbgd.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 916.445 ; gain = 128.000 ; free physical = 323 ; free virtual = 5173
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 916.445 ; gain = 128.000 ; free physical = 323 ; free virtual = 5173
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 916.445 ; gain = 128.000 ; free physical = 322 ; free virtual = 5173
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 916.445 ; gain = 128.000 ; free physical = 321 ; free virtual = 5173
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop '_RECV_DATA_' (/home/roy/workspace/via_bgd/src/lrbgd.cpp:425) in function 'bgd_accel' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop '_DOT_CALC_ALL_' (/home/roy/workspace/via_bgd/src/lrbgd.cpp:676) in function 'bgd_func4' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop '_DOT_CALC_ALL_' (/home/roy/workspace/via_bgd/src/lrbgd.cpp:632) in function 'bgd_func3' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop '_DOT_CALC_ALL_' (/home/roy/workspace/via_bgd/src/lrbgd.cpp:588) in function 'bgd_func2' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop '_DOT_CALC_ALL_' (/home/roy/workspace/via_bgd/src/lrbgd.cpp:542) in function 'bgd_func1' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop '_DOT_CALC_ALL_' (/home/roy/workspace/via_bgd/src/lrbgd.cpp:497) in function 'bgd_func0' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.1' (/home/roy/workspace/via_bgd/src/lrbgd.cpp:438) in function 'bgd_accel' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop '_DOT_CALC0_' (/home/roy/workspace/via_bgd/src/lrbgd.cpp:669) in function 'bgd_func4' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop '_DOT_CALC_LP' (/home/roy/workspace/via_bgd/src/lrbgd.cpp:679) in function 'bgd_func4' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop '_DOT_CALC1_' (/home/roy/workspace/via_bgd/src/lrbgd.cpp:685) in function 'bgd_func4' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop '_DOT_CALC0_' (/home/roy/workspace/via_bgd/src/lrbgd.cpp:625) in function 'bgd_func3' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop '_DOT_CALC_LP' (/home/roy/workspace/via_bgd/src/lrbgd.cpp:635) in function 'bgd_func3' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop '_DOT_CALC1_' (/home/roy/workspace/via_bgd/src/lrbgd.cpp:641) in function 'bgd_func3' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop '_DOT_CALC0_' (/home/roy/workspace/via_bgd/src/lrbgd.cpp:581) in function 'bgd_func2' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop '_DOT_CALC_LP' (/home/roy/workspace/via_bgd/src/lrbgd.cpp:591) in function 'bgd_func2' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop '_DOT_CALC1_' (/home/roy/workspace/via_bgd/src/lrbgd.cpp:597) in function 'bgd_func2' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop '_DOT_CALC0_' (/home/roy/workspace/via_bgd/src/lrbgd.cpp:535) in function 'bgd_func1' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop '_DOT_CALC_LP' (/home/roy/workspace/via_bgd/src/lrbgd.cpp:545) in function 'bgd_func1' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop '_DOT_CALC1_' (/home/roy/workspace/via_bgd/src/lrbgd.cpp:551) in function 'bgd_func1' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop '_DOT_CALC_LP' (/home/roy/workspace/via_bgd/src/lrbgd.cpp:500) in function 'bgd_func0' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop '_DOT_CALC1_' (/home/roy/workspace/via_bgd/src/lrbgd.cpp:506) in function 'bgd_func0' completely with a factor of 5.
+INFO: [XFORM 203-102] Partitioning array 'fltDotTmp' (/home/roy/workspace/via_bgd/src/lrbgd.cpp:526) automatically.
+INFO: [XFORM 203-102] Partitioning array 'fltDotTmp' (/home/roy/workspace/via_bgd/src/lrbgd.cpp:572) automatically.
+INFO: [XFORM 203-102] Partitioning array 'fltDotTmp' (/home/roy/workspace/via_bgd/src/lrbgd.cpp:616) automatically.
+INFO: [XFORM 203-102] Partitioning array 'fltDotTmp' (/home/roy/workspace/via_bgd/src/lrbgd.cpp:660) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 916.445 ; gain = 128.000 ; free physical = 307 ; free virtual = 5160
+WARNING: [XFORM 203-542] Cannot flatten a loop nest '_CHUNKS_LOOP_' (/home/roy/workspace/via_bgd/src/lrbgd.cpp:422:6) in function 'bgd_accel' : 
+
+more than one sub loop.
+INTERNAL-INFO: never seen llvm instruction 'dexp'(522)
+INTERNAL-INFO: never seen llvm instruction 'dexp'(522)
+INTERNAL-INFO: never seen llvm instruction 'dexp'(522)
+INTERNAL-INFO: never seen llvm instruction 'dexp'(522)
+INTERNAL-INFO: never seen llvm instruction 'dexp'(522)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 988.449 ; gain = 200.004 ; free physical = 268 ; free virtual = 5122
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'bgd_accel' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bgd_func0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop '_DOT_CALC_ALL_'.
+WARNING: [SCHED 204-68] The II Violation in module 'bgd_func0' (Loop: _DOT_CALC_ALL_): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'store' operation ('fltDotTmp_addr_1_write_ln501', /home/roy/workspace/via_bgd/src/lrbgd.cpp:501) of variable 'tmp_s', /home/roy/workspace/via_bgd/src/lrbgd.cpp:501 on array 'fltDotTmp', /home/roy/workspace/via_bgd/src/lrbgd.cpp:481 and 'load' operation ('fltDotTmp_load', /home/roy/workspace/via_bgd/src/lrbgd.cpp:501) on array 'fltDotTmp', /home/roy/workspace/via_bgd/src/lrbgd.cpp:481.
+WARNING: [SCHED 204-68] The II Violation in module 'bgd_func0' (Loop: _DOT_CALC_ALL_): Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 1)
+   between 'store' operation ('fltDotTmp_addr_1_write_ln501', /home/roy/workspace/via_bgd/src/lrbgd.cpp:501) of variable 'tmp_s', /home/roy/workspace/via_bgd/src/lrbgd.cpp:501 on array 'fltDotTmp', /home/roy/workspace/via_bgd/src/lrbgd.cpp:481 and 'load' operation ('fltDotTmp_load', /home/roy/workspace/via_bgd/src/lrbgd.cpp:501) on array 'fltDotTmp', /home/roy/workspace/via_bgd/src/lrbgd.cpp:481.
+INFO: [SCHED 204-61] Pipelining result : Target II = 4, Final II = 6, Depth = 14.
+INFO: [SCHED 204-61] Pipelining loop '_ACC_CALC_ALL_'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 12.
+WARNING: [SCHED 204-21] Estimated clock period (8.084ns) exceeds the target (target clock period: 10ns, clock uncertainty: 2.7ns, effective delay budget: 7.3ns).
+WARNING: [SCHED 204-21] The critical path in module 'bgd_func0' consists of the following:
+	'load' operation ('fltDotTmp_load_1', /home/roy/workspace/via_bgd/src/lrbgd.cpp:501) on array 'fltDotTmp', /home/roy/workspace/via_bgd/src/lrbgd.cpp:481 [62]  (1.75 ns)
+	'fadd' operation ('tmp_1_19', /home/roy/workspace/via_bgd/src/lrbgd.cpp:501) [63]  (6.33 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 11.04 seconds; current allocated memory: 151.581 MB.
+INFO: [HLS 200-434] Only 2 loops out of a total 3 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.25 seconds; current allocated memory: 152.500 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bgd_func1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop '_DOT_CALC_ALL_'.
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 4)
+   between 'fadd' operation ('tmp_4_17', /home/roy/workspace/via_bgd/src/lrbgd.cpp:546) and 'fadd' operation ('tmp_4_17', /home/roy/workspace/via_bgd/src/lrbgd.cpp:546).
+INFO: [SCHED 204-61] Pipelining result : Target II = 4, Final II = 5, Depth = 15.
+INFO: [SCHED 204-61] Pipelining loop '_ACC_CALC_ALL_'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 12.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.46 seconds; current allocated memory: 153.068 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 153.873 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bgd_func2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop '_DOT_CALC_ALL_'.
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 4)
+   between 'fadd' operation ('tmp_4_12', /home/roy/workspace/via_bgd/src/lrbgd.cpp:592) and 'fadd' operation ('tmp_4_12', /home/roy/workspace/via_bgd/src/lrbgd.cpp:592).
+INFO: [SCHED 204-61] Pipelining result : Target II = 4, Final II = 5, Depth = 15.
+INFO: [SCHED 204-61] Pipelining loop '_ACC_CALC_ALL_'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 12.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.43 seconds; current allocated memory: 154.444 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 155.249 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bgd_func3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop '_DOT_CALC_ALL_'.
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 4)
+   between 'fadd' operation ('tmp_4_7', /home/roy/workspace/via_bgd/src/lrbgd.cpp:636) and 'fadd' operation ('tmp_4_7', /home/roy/workspace/via_bgd/src/lrbgd.cpp:636).
+INFO: [SCHED 204-61] Pipelining result : Target II = 4, Final II = 5, Depth = 15.
+INFO: [SCHED 204-61] Pipelining loop '_ACC_CALC_ALL_'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 12.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.43 seconds; current allocated memory: 155.851 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 156.655 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bgd_func4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop '_DOT_CALC_ALL_'.
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 4)
+   between 'fadd' operation ('tmp_1_4', /home/roy/workspace/via_bgd/src/lrbgd.cpp:680) and 'fadd' operation ('tmp_1_4', /home/roy/workspace/via_bgd/src/lrbgd.cpp:680).
+INFO: [SCHED 204-61] Pipelining result : Target II = 4, Final II = 5, Depth = 15.
+INFO: [SCHED 204-61] Pipelining loop '_ACC_CALC_ALL_'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 12.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.44 seconds; current allocated memory: 157.194 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 158.004 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bgd_accel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop '_RECV_WEIGHT_'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop '_RECV_DATA_'.
+WARNING: [SCHED 204-69] Unable to schedule 'store' operation ('fltData_addr_2_write_ln439', /home/roy/workspace/via_bgd/src/lrbgd.cpp:439) of variable 'valData_read', /home/roy/workspace/via_bgd/src/lrbgd.cpp:435 on array 'fltData', /home/roy/workspace/via_bgd/src/lrbgd.cpp:385 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'fltData'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 4.
+INFO: [SCHED 204-61] Pipelining loop '_SEND_GRADIENT_'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+WARNING: [SCHED 204-71] Latency directive discarded for region bgd_accel since it contains subloops.
+WARNING: [SCHED 204-21] Estimated clock period (8.321ns) exceeds the target (target clock period: 10ns, clock uncertainty: 2.7ns, effective delay budget: 7.3ns).
+WARNING: [SCHED 204-21] The critical path in module 'bgd_accel' consists of the following:
+	'mul' operation of DSP[36] ('mul_ln409', /home/roy/workspace/via_bgd/src/lrbgd.cpp:409) [35]  (2.82 ns)
+	'add' operation of DSP[36] ('add_ln409', /home/roy/workspace/via_bgd/src/lrbgd.cpp:409) [36]  (2.73 ns)
+	'getelementptr' operation ('fltWeight_addr', /home/roy/workspace/via_bgd/src/lrbgd.cpp:409) [38]  (0 ns)
+	'store' operation ('fltWeight_addr_write_ln409', /home/roy/workspace/via_bgd/src/lrbgd.cpp:409) of variable 'valWeight_read', /home/roy/workspace/via_bgd/src/lrbgd.cpp:408 on array 'fltWeight', /home/roy/workspace/via_bgd/src/lrbgd.cpp:389 [41]  (2.77 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.39 seconds; current allocated memory: 158.487 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.78 seconds; current allocated memory: 159.294 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bgd_func0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'bgd_accel_dadddsub_64ns_64ns_64_7_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'bgd_accel_ddiv_64ns_64ns_64_31_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'bgd_accel_dexp_64ns_64ns_64_18_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'bgd_accel_fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'bgd_accel_fadd_32ns_32ns_32_5_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'bgd_accel_fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'bgd_accel_fpext_32ns_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'bgd_accel_fptrunc_64ns_32_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bgd_func0'.
+INFO: [HLS 200-111]  Elapsed time: 0.57 seconds; current allocated memory: 161.351 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bgd_func1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'bgd_accel_dadddsub_64ns_64ns_64_7_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'bgd_accel_ddiv_64ns_64ns_64_31_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'bgd_accel_dexp_64ns_64ns_64_18_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'bgd_accel_fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'bgd_accel_fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'bgd_accel_fpext_32ns_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'bgd_accel_fptrunc_64ns_32_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bgd_func1'.
+INFO: [HLS 200-111]  Elapsed time: 0.53 seconds; current allocated memory: 165.540 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bgd_func2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'bgd_accel_dadddsub_64ns_64ns_64_7_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'bgd_accel_ddiv_64ns_64ns_64_31_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'bgd_accel_dexp_64ns_64ns_64_18_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'bgd_accel_fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'bgd_accel_fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'bgd_accel_fpext_32ns_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'bgd_accel_fptrunc_64ns_32_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bgd_func2'.
+INFO: [HLS 200-111]  Elapsed time: 0.5 seconds; current allocated memory: 169.624 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bgd_func3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'bgd_accel_dadddsub_64ns_64ns_64_7_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'bgd_accel_ddiv_64ns_64ns_64_31_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'bgd_accel_dexp_64ns_64ns_64_18_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'bgd_accel_fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'bgd_accel_fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'bgd_accel_fpext_32ns_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'bgd_accel_fptrunc_64ns_32_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bgd_func3'.
+INFO: [HLS 200-111]  Elapsed time: 0.51 seconds; current allocated memory: 173.612 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bgd_func4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'bgd_accel_dadddsub_64ns_64ns_64_7_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'bgd_accel_ddiv_64ns_64ns_64_31_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'bgd_accel_dexp_64ns_64ns_64_18_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'bgd_accel_fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'bgd_accel_fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'bgd_accel_fpext_32ns_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'bgd_accel_fptrunc_64ns_32_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bgd_func4'.
+INFO: [HLS 200-111]  Elapsed time: 0.53 seconds; current allocated memory: 177.644 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bgd_accel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'bgd_accel/valData' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'bgd_accel/valWeight' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'bgd_accel/valGradient' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'bgd_accel' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Generating core module 'bgd_accel_mac_muladd_11ns_14s_14ns_14_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bgd_accel'.
+INFO: [HLS 200-111]  Elapsed time: 0.57 seconds; current allocated memory: 181.653 MB.
+INFO: [RTMG 210-278] Implementing memory 'a3_bgd_func0_fltDotTmp_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'a3_bgd_accel_fltData_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'a3_bgd_accel_fltLabel_ram (RAM)' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'a3_bgd_accel_fltWeight_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'a3_bgd_accel_fltGradient_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 988.453 ; gain = 200.008 ; free physical = 206 ; free virtual = 5078
+INFO: [VHDL 208-304] Generating VHDL RTL for bgd_accel with prefix a3_.
+INFO: [VLOG 209-307] Generating Verilog RTL for bgd_accel with prefix a3_.
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/roy/sdsoc/Vivado/2019.1/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'a3_bgd_accel_ap_dadddsub_5_full_dsp_64' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'a3_bgd_accel_ap_dadddsub_5_full_dsp_64'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'a3_bgd_accel_ap_dadddsub_5_full_dsp_64'...
+WARNING: [IP_Flow 19-4832] The IP name 'a3_bgd_accel_ap_ddiv_29_no_dsp_64' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'a3_bgd_accel_ap_ddiv_29_no_dsp_64'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'a3_bgd_accel_ap_ddiv_29_no_dsp_64'...
+WARNING: [IP_Flow 19-4832] The IP name 'a3_bgd_accel_ap_dexp_16_full_dsp_64' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'a3_bgd_accel_ap_dexp_16_full_dsp_64'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'a3_bgd_accel_ap_dexp_16_full_dsp_64'...
+WARNING: [IP_Flow 19-4832] The IP name 'a3_bgd_accel_ap_fadd_3_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'a3_bgd_accel_ap_fadd_3_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'a3_bgd_accel_ap_fadd_3_full_dsp_32'...
+WARNING: [IP_Flow 19-4832] The IP name 'a3_bgd_accel_ap_fadd_3_no_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'a3_bgd_accel_ap_fadd_3_no_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'a3_bgd_accel_ap_fadd_3_no_dsp_32'...
+WARNING: [IP_Flow 19-4832] The IP name 'a3_bgd_accel_ap_fmul_2_max_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'a3_bgd_accel_ap_fmul_2_max_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'a3_bgd_accel_ap_fmul_2_max_dsp_32'...
+WARNING: [IP_Flow 19-4832] The IP name 'a3_bgd_accel_ap_fpext_0_no_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'a3_bgd_accel_ap_fpext_0_no_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'a3_bgd_accel_ap_fpext_0_no_dsp_32'...
+WARNING: [IP_Flow 19-4832] The IP name 'a3_bgd_accel_ap_fptrunc_0_no_dsp_64' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'a3_bgd_accel_ap_fptrunc_0_no_dsp_64'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'a3_bgd_accel_ap_fptrunc_0_no_dsp_64'...
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/roy/sdsoc/Vivado/2019.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 24 10:27:46 2020...
+INFO: [HLS 200-112] Total elapsed time: 54.34 seconds; peak allocated memory: 181.653 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Fri Apr 24 10:27:46 2020...
+/usr/bin/sed -i -e {s/xilinx\.com\/xidane/xilinx\.com\/xd/g} /home/roy/workspace/via_bgd/Release/_sds/vhls/bgd_accel/solution/impl/ip/auxiliary.xml
+/home/roy/sdsoc/SDx/2019.1/bin/xsltproc  --output /home/roy/workspace/via_bgd/Release/_sds/.llvm/bgd_accel.hlsmap1.xml  --stringparam P_CLKID 2  --stringparam P_HLS_TYPE hls   /home/roy/sdsoc/SDx/2019.1/scripts/xsd/xdHlsmapRenameAttr.xsl  /home/roy/workspace/via_bgd/Release/_sds/.llvm/bgd_accel_auxiliary.xml
+/home/roy/sdsoc/SDx/2019.1/bin/xsltproc  --output /home/roy/workspace/via_bgd/Release/_sds/.llvm/bgd_accel.hlsmap.xml  /home/roy/sdsoc/SDx/2019.1/scripts/xsd/xdHlsmapAdapter.xsl  /home/roy/workspace/via_bgd/Release/_sds/.llvm/bgd_accel.hlsmap1.xml
+/home/roy/sdsoc/SDx/2019.1/bin/xsltproc    --output /home/roy/workspace/via_bgd/Release/_sds/.llvm/bgd_accel.fcnmap.xml  /home/roy/sdsoc/SDx/2019.1/scripts/xsd/xdHlsmapAxi4.xsl  /home/roy/workspace/via_bgd/Release/_sds/.llvm/bgd_accel.hlsmap.xml
+/home/roy/sdsoc/SDx/2019.1/bin/xsltproc  --output /home/roy/workspace/via_bgd/Release/_sds/.llvm/bgd_accel_if.xml  --stringparam P_ADAPTER_COMPREF adapter_v3_0  /home/roy/sdsoc/SDx/2019.1/scripts/xsd/xdHlsAdapterComp.xsl  /home/roy/workspace/via_bgd/Release/_sds/.llvm/bgd_accel.fcnmap.xml
+arm-linux-gnueabihf-objcopy --add-section .xddata=/home/roy/workspace/via_bgd/Release/_sds/swstubs/bgd_accel.xml /home/roy/workspace/via_bgd/Release/_sds/swstubs/lrbgd.o
+arm-linux-gnueabihf-objcopy --add-section .xdasm=/home/roy/workspace/via_bgd/Release/_sds/.llvm/src/lrbgd.s /home/roy/workspace/via_bgd/Release/_sds/swstubs/lrbgd.o
+arm-linux-gnueabihf-g++ -E -I../src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__ -MT/home/roy/workspace/via_bgd/Release/src/lrbgd.o -MF/home/roy/workspace/via_bgd/Release/src/lrbgd.d -MT/home/roy/workspace/via_bgd/Release/src/lrbgd.o       -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I /home/roy/sdsoc/Vivado/2019.1/include /home/roy/workspace/via_bgd/src/lrbgd.cpp -o /home/roy/workspace/via_bgd/Release/_sds/.pp/lrbgd.iix
+arm-linux-gnueabihf-objcopy --add-section .xdpp=/home/roy/workspace/via_bgd/Release/_sds/.pp/lrbgd.ii /home/roy/workspace/via_bgd/Release/_sds/swstubs/lrbgd.o
+arm-linux-gnueabihf-objcopy --add-section .xdfcnmap=/home/roy/workspace/via_bgd/Release/_sds/.llvm/bgd_accel.fcnmap.xml /home/roy/workspace/via_bgd/Release/_sds/swstubs/lrbgd.o
+arm-linux-gnueabihf-objcopy --add-section .xdhlscore=/home/roy/workspace/via_bgd/Release/_sds/vhls/bgd_accel/solution/impl/ip/xilinx_com_hls_bgd_accel_1_0.zip /home/roy/workspace/via_bgd/Release/_sds/swstubs/lrbgd.o
+arm-linux-gnueabihf-objcopy --add-section .xdif=/home/roy/workspace/via_bgd/Release/_sds/.llvm/bgd_accel_if.xml /home/roy/workspace/via_bgd/Release/_sds/swstubs/lrbgd.o
+sds++ log file saved as /home/roy/workspace/via_bgd/Release/_sds/reports/sds_lrbgd.log
+sds++ completed at Fri Apr 24 10:27:47 CST 2020

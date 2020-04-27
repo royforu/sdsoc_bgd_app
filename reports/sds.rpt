@@ -1,0 +1,34 @@
+(c) Copyright 2012-2019 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2019.1 SW Build 2552052 on Fri May 24 14:48:04 MDT 2019
+# Start time    : Fri Apr 24 11:31:29 CST 2020
+# Command line  : sds++ --remote_ip_cache /home/roy/workspace/ip_cache -o via_bgd.elf ./src/dmain.o ./src/lrbgd.o ./src/main.o -dmclkid 2 -sds-sys-config linux -sds-proc linux -sds-pf zc706
+# Log file      : /home/roy/workspace/via_bgd/Release/_sds/reports/sds.log
+# Journal file  : /home/roy/workspace/via_bgd/Release/_sds/reports/sds.jou
+# Report file   : /home/roy/workspace/via_bgd/Release/_sds/reports/sds.rpt
+#-----------------------------------------------------------
+
+-------------------
+Design Timing Check
+-------------------
+
+  Partition 0
+  Vivado Log     : file not found : /home/roy/workspace/via_bgd/Release/_sds/p0/vivado/vivado.log
+  Timing Summary : file not found : /home/roy/workspace/via_bgd/Release/_sds/p0/vivado/prj/prj.runs/impl_1/*_timing_summary_routed.rpt
+
+  No timing report available
+
+-------------------
+Data Motion Network
+-------------------
+
+Data motion network report generated in /home/roy/workspace/via_bgd/Release/_sds/reports
+HTML file : /home/roy/workspace/via_bgd/Release/_sds/reports/data_motion.html
+
+-------------------
+Design Utilization
+-------------------
+
+  Partition 0
+  Utilization Summary : file not found : /home/roy/workspace/via_bgd/Release/_sds/p0/vivado/prj/prj.runs/impl_1/*_utilization_placed.rpt
+

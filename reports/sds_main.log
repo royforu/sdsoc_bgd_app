@@ -1,0 +1,73 @@
+(c) Copyright 2012-2019 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2019.1 SW Build 2552052 on Fri May 24 14:48:04 MDT 2019
+# Start time    : Fri Apr 24 11:31:23 CST 2020
+# Command line  : sds++ -Wall -O3 -I../src -c -fmessage-length=0 -MTsrc/main.o -MMD -MP -MFsrc/main.d -MTsrc/main.o -o src/main.o ../src/main.cpp -sds-hw bgd_accel lrbgd.cpp -clkid 2 -sds-end -sds-hw s2mm_data_copy dmain.cpp -clkid 2 -sds-end -sds-hw via_dma_in0 dmain.cpp -clkid 2 -sds-end -sds-hw via_dma_in1 dmain.cpp -clkid 2 -sds-end -sds-sys-config linux -sds-proc linux -sds-pf zc706
+# Log file      : /home/roy/workspace/via_bgd/Release/_sds/reports/sds_main.log
+# Journal file  : /home/roy/workspace/via_bgd/Release/_sds/reports/sds_main.jou
+# Report file   : /home/roy/workspace/via_bgd/Release/_sds/reports/sds_main.rpt
+#-----------------------------------------------------------
+
+Analyzing source for RTL template usage
+/home/roy/sdsoc/SDx/2019.1/bin/rtl_template_extract  /home/roy/workspace/via_bgd/src/main.cpp  -save-query /home/roy/workspace/via_bgd/Release/_sds/.llvm/src/main.rtlx  --  -c  -I../src  -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__  
+    -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g -w      -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I /home/roy/sdsoc/Vivado/2019.1/include   -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0 -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/arm-linux-gnueabihf -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/backward -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include-fixed -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include  -std=c++11
+Create data motion intermediate representation
+/home/roy/sdsoc/SDx/2019.1/bin/clang_wrapper  -I../src  -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__  -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g       -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I /home/roy/sdsoc/Vivado/2019.1/include   -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0 -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/arm-linux-gnueabihf -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/8.2.0/backward -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/8.2.0/include-fixed -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -I/home/roy/sdsoc/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include  -std=c++11  -emit-llvm -S /home/roy/workspace/via_bgd/src/main.cpp -o /home/roy/workspace/via_bgd/Release/_sds/.llvm/src/main.s
+/home/roy/workspace/via_bgd/src/main.cpp:130:14: warning: unused variable 'u32Chunks' [-Wunused-variable]
+    uint32_t u32Chunks = regScalar;
+             ^
+/home/roy/workspace/via_bgd/src/main.cpp:221:10: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+        state = "operating";
+                ^
+/home/roy/workspace/via_bgd/src/main.cpp:238:6: warning: unused variable 'ret' [-Wunused-variable]
+        int ret;
+            ^
+/home/roy/workspace/via_bgd/src/main.cpp:241:8: warning: unused variable 'Module' [-Wunused-variable]
+        char *Module[100] = {0};
+              ^
+/home/roy/workspace/via_bgd/src/main.cpp:277:13: warning: unused variable 'swdata' [-Wunused-variable]
+    float  *swdata, *swweight, *swgradient,  *swoutbuf;
+            ^
+/home/roy/workspace/via_bgd/src/main.cpp:277:47: warning: unused variable 'swoutbuf' [-Wunused-variable]
+    float  *swdata, *swweight, *swgradient,  *swoutbuf;
+                                              ^
+/home/roy/workspace/via_bgd/src/main.cpp:277:22: warning: unused variable 'swweight' [-Wunused-variable]
+    float  *swdata, *swweight, *swgradient,  *swoutbuf;
+                     ^
+/home/roy/workspace/via_bgd/src/main.cpp:86:13: warning: unused function 'init_arrays_out' [-Wunused-function]
+static void init_arrays_out(float *out, int outlen)
+            ^
+Compiling /home/roy/workspace/via_bgd/src/main.cpp
+arm-linux-gnueabihf-g++ -c -I../src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__ -MT/home/roy/workspace/via_bgd/Release/src/main.o -MF/home/roy/workspace/via_bgd/Release/src/main.d -MT/home/roy/workspace/via_bgd/Release/src/main.o       -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I /home/roy/sdsoc/Vivado/2019.1/include /home/roy/workspace/via_bgd/src/main.cpp -o src/main.o
+/home/roy/workspace/via_bgd/src/main.cpp: In function ‘void bgd_accel_sw(float*, float*, float*, int)’:
+/home/roy/workspace/via_bgd/src/main.cpp:130:14: warning: unused variable ‘u32Chunks’ [-Wunused-variable]
+     uint32_t u32Chunks = regScalar;
+              ^~~~~~~~~
+/home/roy/workspace/via_bgd/src/main.cpp: In function ‘int fpga_state()’:
+/home/roy/workspace/via_bgd/src/main.cpp:221:10: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  state = "operating";
+          ^~~~~~~~~~~
+/home/roy/workspace/via_bgd/src/main.cpp: In function ‘void download_bitstream()’:
+/home/roy/workspace/via_bgd/src/main.cpp:238:6: warning: unused variable ‘ret’ [-Wunused-variable]
+  int ret;
+      ^~~
+/home/roy/workspace/via_bgd/src/main.cpp:241:8: warning: unused variable ‘Module’ [-Wunused-variable]
+  char *Module[100] = {0};
+        ^~~~~~
+/home/roy/workspace/via_bgd/src/main.cpp: In function ‘int main(int, char**)’:
+/home/roy/workspace/via_bgd/src/main.cpp:277:13: warning: unused variable ‘swdata’ [-Wunused-variable]
+     float  *swdata, *swweight, *swgradient,  *swoutbuf;
+             ^~~~~~
+/home/roy/workspace/via_bgd/src/main.cpp:277:22: warning: unused variable ‘swweight’ [-Wunused-variable]
+     float  *swdata, *swweight, *swgradient,  *swoutbuf;
+                      ^~~~~~~~
+/home/roy/workspace/via_bgd/src/main.cpp:277:47: warning: unused variable ‘swoutbuf’ [-Wunused-variable]
+     float  *swdata, *swweight, *swgradient,  *swoutbuf;
+                                               ^~~~~~~~
+/home/roy/workspace/via_bgd/src/main.cpp: At global scope:
+/home/roy/workspace/via_bgd/src/main.cpp:86:13: warning: ‘void init_arrays_out(float*, int)’ defined but not used [-Wunused-function]
+ static void init_arrays_out(float *out, int outlen)
+             ^~~~~~~~~~~~~~~
+arm-linux-gnueabihf-objcopy --add-section .xdsdata=/home/roy/workspace/via_bgd/Release/_sds/swstubs/main.o.xml src/main.o
+sds++ log file saved as /home/roy/workspace/via_bgd/Release/_sds/reports/sds_main.log
+sds++ completed at Fri Apr 24 11:31:29 CST 2020

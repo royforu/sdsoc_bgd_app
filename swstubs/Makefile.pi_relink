@@ -1,0 +1,18 @@
+ADDRESS_MAP:=/home/roy/workspace/via_bgd/Release/_sds/p0/.cf_work/address_map.xml
+
+OUTPUT:=via_bgd.elf
+
+.PHONY: relink clean
+
+relink: portinfo.o
+	arm-linux-gnueabihf-ar crs libxlnk_stub.a portinfo.o /home/roy/workspace/via_bgd/Release/_sds/swstubs/cf_stub.o
+	arm-linux-gnueabihf-g++ -L./    /home/roy/workspace/via_bgd/Release/_sds/swstubs/dmain.o /home/roy/workspace/via_bgd/Release/_sds/swstubs/lrbgd.o /home/roy/workspace/via_bgd/Release/_sds/swstubs/main.o     -L/home/roy/workspace/via_bgd/Release/_sds/swstubs -Wl,--start-group  -Wl,--end-group -Wl,--start-group    -lpthread -L /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/lib -lsds_lib -lxlnk_stub  -Wl,--end-group -o via_bgd.elf
+	arm-linux-gnueabihf-objcopy -R .xdinfo -R .xddata -R .xdasm -R .xdfcnmap -R .xdhlscore -R .xdif -R .xdparams -R .xdcore -R .xdrepo -R .xdsdata -R .xdpp -R .xdrtlx via_bgd.elf
+	rm libxlnk_stub.a portinfo.o portinfo.h portinfo.c
+
+portinfo.o: ${ADDRESS_MAP} 
+	/home/roy/sdsoc/SDx/2019.1/bin/cf2sw -i /home/roy/workspace/via_bgd/Release/_sds/.llvm/apsys_0.xml -r /home/roy/workspace/via_bgd/Release/_sds/.cdb/xd_ip_db.xml -a ${ADDRESS_MAP} -pollMode 0 -mc 
+	arm-linux-gnueabihf-gcc       -I /home/roy/sdsoc/SDx/2019.1/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I /home/roy/sdsoc/Vivado/2019.1/include -c portinfo.c
+
+clean:
+	rm -f portinfo.o portinfo.h portinfo.c ${OUTPUT} libxlnk_stub.a
